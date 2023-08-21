@@ -1,14 +1,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-08-09 02:12:07
+# UPDATED: 2023-08-21 02:10:56
 # DOMAIN: 154
 # DOMAIN-KEYWORD: 39
-# DOMAIN-SUFFIX: 19160
+# DOMAIN-SUFFIX: 19164
 # IP-CIDR: 105
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 19508
+# TOTAL: 19512
 adobeereg.com
 angle.com.tw
 anime-rule34-world.b-cdn.net
@@ -5274,6 +5274,7 @@ www-cdn.icloud.com.akadns.net
 .dungeonkeeper.cn
 .dungeonkeeper.com
 .dunyabulteni.net
+.duolingo.com
 .duoweitimes.com
 .duoweiweek.com
 .duping.net
@@ -8910,6 +8911,7 @@ www-cdn.icloud.com.akadns.net
 .idsam.com
 .idservice.inc
 .idv.tw
+.idx.dev
 .ie10.com
 .ie11.com
 .ie8.co
@@ -9454,6 +9456,7 @@ www-cdn.icloud.com.akadns.net
 .issquareup.com
 .issuu.com
 .istars.co.nz
+.istarshine.com
 .istef.info
 .istiqlalhewer.com
 .istockphoto.com
@@ -11842,6 +11845,7 @@ www-cdn.icloud.com.akadns.net
 .mypornvid.fun
 .mypornwap.fun
 .myq2.com
+.myqnapcloud.cn
 .myqnapcloud.com
 .myradio.hk
 .myreadingmanga.info
@@ -12951,7 +12955,6 @@ www-cdn.icloud.com.akadns.net
 .overdaily.org
 .overleaf.com
 .overplay.net
-.oversea.istarshine.com
 .overthumbs.com
 .ovi.com
 .ovpn.com
@@ -14197,6 +14200,7 @@ www-cdn.icloud.com.akadns.net
 .qixianglu.cn
 .qkjuyet.com
 .qkshare.com
+.qlinkto.cn
 .qmap.pub
 .qmov.com
 .qmov.net
