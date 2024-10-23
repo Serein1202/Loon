@@ -1,10 +1,8 @@
-#!name = TestFlight解锁
-#!desc = 解除TestFlight的区域限制
-#!openUrl = 
-#!author = NobyDa
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/TestFlight.png
-#!date = 2023-09-06 01:30:10
+#!name = TestFlight
+#!desc = 解除TestFlight的区域限制，支持tvOS。
+#!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool]
+#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/testflight.png
+#!date = 2024-08-07 16:25:33
 
 [General]
 skip-proxy = iosapps.itunes.apple.com
@@ -12,8 +10,8 @@ skip-proxy = iosapps.itunes.apple.com
 [Rule]
 DOMAIN, testflight.apple.com, PROXY
 
-[Script]
-http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TestFlight/TF_Download.js, requires-body = true, tag = TestFlight解锁
+[Rewrite]
+^https:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*\/builds\/\d*\/install$ request-body-replace-regex "storefrontId"\x20:\x20"\d{6}-\d{2},\d{2}", "storefrontId":"143441-19,29",
 
-[Mitm]
+[MITM]
 hostname = testflight.apple.com
