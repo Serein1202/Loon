@@ -1,0 +1,15 @@
+#!name=LynkCo 自动签到
+#!desc=领克签到：自动抓取 Cookie + 自动定时签到
+#!author=ChatGPT
+#!version=1.0
+
+[MITM]
+hostname = h5-api.lynkco.com
+
+[Rewrite]
+# 自动获取 Cookie（访问签到接口即自动写入）
+^https:\/\/h5-api\.lynkco\.com\/up\/api\/v1\/user\/sign script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/lynkco_get_cookie.js, requires-body=true, tag=领克 获取Cookie
+
+[Script]
+# 定时执行签到（每日 08:00）
+cron "0 8 * * *" script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/lynkco_sign.js, tag=领克 自动签到
