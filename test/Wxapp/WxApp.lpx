@@ -1,0 +1,22 @@
+# NAME: WeChat
+# AUTHOR: Serein1202
+# REPO: https://github.com/Serein1202/Loon
+# UPDATED: 2025-12-4 17:11
+# DOMAIN-SUFFIX: 1
+# DOMAIN: 3
+# TOTAL: 4
+# DOMAIN,mmocgame.qpic.cn
+# DOMAIN,wxsmw.wxs.qq.com
+# DOMAIN,wximg.wxs.qq.com
+# DOMAIN-SUFFIX,gtimg.cn
+
+[Rule]
+^https?:\/\/wxsmw\.wxs\.qq\.com REJECT-VEDIO
+^https?:\/\/wximg\.wxs\.qq\.com REJECT-IMG
+^https?:\/\/pgdt\.gtimg\.cn REJECT-IMG
+^https?:\/\/mmocgame\.qpic\.cn REJECT-IMG
+
+[MITM]
+hostname = mmocgame.qpic.cn,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn
+
+
