@@ -1,6 +1,12 @@
 #!name=部分微信小程序去广告（测试）
 #!desc=针对部分小程序广告进行拦截，要清除缓存拦截广告才会生效！
 #!author=Serein1202[https://github.com/Serein1202]
+#!icon=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Icon/qushuiyin.png
+#!homepage=https://github.com/Serein1202/Loon
+#!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Wxapp/WxApp.lpx
+#!tag=去广告, Serein1202
+#!system=iOS, iPadOS
+#!date=2025-12-4 22:04:00
 
 [Rule]
 # DOMAIN,mmocgame.qpic.cn
