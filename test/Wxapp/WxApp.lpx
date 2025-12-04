@@ -13,13 +13,17 @@
 ^https?:\/\/wximg\.wxs\.qq\.com reject-img
 ^https?:\/\/pgdt\.gtimg\.cn reject-img
 ^https?:\/\/mmocgame\.qpic\.cn reject-img
+^https?:\/\/s21\.ax1x\.com reject-img
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.index data.banner data.advertisement
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace svip 1
+
 
 
 [Script]
 
 [MITM]
-hostname = mmocgame.qpic.cn,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn
+hostname = mmocgame.qpic.cn,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
 
 
