@@ -19,6 +19,6 @@
 [Script]
 
 [MITM]
-hostname = mmocgame.qpic.cn,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn
+hostname = mmocgame.qpic.cn,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn
 
 
