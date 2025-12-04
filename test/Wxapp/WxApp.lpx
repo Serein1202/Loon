@@ -9,10 +9,10 @@
 # DOMAIN-SUFFIX,gtimg.cn
 
 [Rewrite]
-^https?:\/\/wxsmw\.wxs\.qq\.com REJECT-VEDIO
-^https?:\/\/wximg\.wxs\.qq\.com REJECT-IMG
-^https?:\/\/pgdt\.gtimg\.cn REJECT-IMG
-^https?:\/\/mmocgame\.qpic\.cn REJECT-IMG
+^https?:\/\/wxsmw\.wxs\.qq\.com reject-video
+^https?:\/\/wximg\.wxs\.qq\.com reject-img
+^https?:\/\/pgdt\.gtimg\.cn reject-img
+^https?:\/\/mmocgame\.qpic\.cn reject-img
 
 [Script]
 
