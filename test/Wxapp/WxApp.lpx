@@ -10,7 +10,7 @@
 # DOMAIN,wximg.wxs.qq.com
 # DOMAIN-SUFFIX,gtimg.cn
 
-[Rule]
+[Rewrite]
 ^https?:\/\/wxsmw\.wxs\.qq\.com REJECT-VEDIO
 ^https?:\/\/wximg\.wxs\.qq\.com REJECT-IMG
 ^https?:\/\/pgdt\.gtimg\.cn REJECT-IMG
