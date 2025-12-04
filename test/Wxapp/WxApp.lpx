@@ -17,7 +17,7 @@
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.index data.banner data.advertisement
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
-^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace svip 1
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace data.is_svip 1 svip 1 
 
 
 
