@@ -13,6 +13,8 @@
 ^https?:\/\/wximg\.wxs\.qq\.com reject-img
 ^https?:\/\/pgdt\.gtimg\.cn reject-img
 ^https?:\/\/mmocgame\.qpic\.cn reject-img
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.description data.mix_title data.zs_title data.zs_image banner advertisement
+
 
 [Script]
 
