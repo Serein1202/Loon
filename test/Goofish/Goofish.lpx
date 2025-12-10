@@ -15,7 +15,7 @@
 ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads\/2\.0 reject
 ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/3\.0 reject
 ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.gamecenter\.degrade\.list\/1\.0 reject
-^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/1\.0\ response-body-json-del data.strategies[0] data.strategies[1]
+^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/1\.0\ response-body-json-del data.strategies[1].data.renderMap
 
 
 
