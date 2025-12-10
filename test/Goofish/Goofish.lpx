@@ -13,6 +13,8 @@
 
 [Rewrite]
 ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads\/2\.0 reject
+^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/3\.0 reject
+
 
 [Script]
 
