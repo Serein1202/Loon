@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Goofish/Goofish.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-10 18:30:00
+#!date=2025-12-10 20:58:00
 
 [Rule]
 # DOMAIN,acs.m.goofish.com
@@ -15,7 +15,7 @@
 ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads\/2\.0 reject
 ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/3\.0 reject
 ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.gamecenter\.degrade\.list\/1\.0 reject
-^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/1\.0\ response-body-json-del data.strategies[1].data.renderMap
+^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/1\.0\ response-body-json-del data.strategies[0] data.strategies[1]
 
 
 
