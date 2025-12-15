@@ -22,16 +22,15 @@
 ^https?:\/\/pgdt\.gtimg\.cn reject
 ^https?:\/\/mmocgame\.qpic\.cn reject
 ^https?:\/\/s21\.ax1x\.com reject
-^https?:\/\/szextshort\.weixin\.qq\.com reject-video
 
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.index data.banner data.advertisement
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
-^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace data.is_svip 1 svip 1 
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace data.is_svip 1 svip 1 invite_num 999
 
 [Script]
 
 [MITM]
-hostname = szextshort.weixin.qq.com,mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
+hostname = mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
 
 
