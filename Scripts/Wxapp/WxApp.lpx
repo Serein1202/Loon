@@ -28,10 +28,11 @@
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace data.is_svip 1 svip 1 invite_num 999
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/share response-body-json-replace data.invite_num 999
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite response-body-json-replace count 5
 
 
 [Script]
-http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js
+http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/WxApp.js,requires-body=true,timeout=60,tag=Wxapp
 
 
 [MITM]
