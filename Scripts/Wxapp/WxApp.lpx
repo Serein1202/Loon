@@ -22,6 +22,9 @@
 ^https?:\/\/pgdt\.gtimg\.cn reject
 ^https?:\/\/mmocgame\.qpic\.cn reject
 ^https?:\/\/s21\.ax1x\.com reject
+
+^https?:\/\/szminorshort\.weixin\.qq\.com reject
+
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.index data.banner data.advertisement
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
@@ -30,6 +33,6 @@
 [Script]
 
 [MITM]
-hostname = mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
+hostname = szminorshort.weixin.qq.com,mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
 
 
