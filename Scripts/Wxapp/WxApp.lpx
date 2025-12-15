@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Wxapp/WxApp.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-15 17:31:00
+#!date=2025-12-15 18:31:00
 
 [Rule]
 # DOMAIN,mmocgame.qpic.cn
@@ -22,8 +22,7 @@
 ^https?:\/\/pgdt\.gtimg\.cn reject
 ^https?:\/\/mmocgame\.qpic\.cn reject
 ^https?:\/\/s21\.ax1x\.com reject
-
-^https?:\/\/szminorshort\.weixin\.qq\.com reject
+^https?:\/\/szextshort\.weixin\.qq\.com reject-video-no-drop
 
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.index data.banner data.advertisement
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
@@ -33,6 +32,6 @@
 [Script]
 
 [MITM]
-hostname = szminorshort.weixin.qq.com,mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
+hostname = szextshort.weixin.qq.com,mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
 
 
