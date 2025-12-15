@@ -27,7 +27,7 @@
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace data.is_svip 1 svip 1
-^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/share response-body-json-replace data.invite_num 999
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/share response-body-json-replace data.invite_num 5
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite response-body-json-replace count 5
 
 
