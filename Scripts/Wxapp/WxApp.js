@@ -1,3 +1,8 @@
+if (!$response.body) {
+    $done({});
+}else{
+    console.log("检测到body");
+}
 const newArray = [
     {
       "id": 29038885,
@@ -145,4 +150,6 @@ let obj = JSON.parse($response.body);
 obj.data = newArray;
 
 body = JSON.stringify(obj);
+console.log("已修改body");
 $done({ body });
+
