@@ -26,7 +26,7 @@
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.index data.banner data.advertisement
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
-^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace vip 1 invite_num 5 data.residue_time 4102397476 residue_time "2099-12-31 18:51"
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace vip 1 invite_num 5 data.residue_time 4102397476
 # ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/share response-body-json-replace data.invite_num 5
 # ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite response-body-json-replace count 5
 [Script]
