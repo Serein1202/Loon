@@ -1,7 +1,5 @@
 if (!$response.body) {
     $done({});
-}else{
-    console.log("检测到body");
 }
 const newArray = [
     {
@@ -146,10 +144,8 @@ const newArray = [
     }
 ];
 let obj = JSON.parse($response.body);
-
+obj.count = 5;
 obj.data = newArray;
 
 body = JSON.stringify(obj);
-console.log("已修改body");
 $done({ body });
-

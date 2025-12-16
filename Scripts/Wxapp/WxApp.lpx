@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Wxapp/WxApp.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-15 20:31:00
+#!date=2025-12-16 14:31:00
 
 [Rule]
 # DOMAIN,mmocgame.qpic.cn
@@ -28,7 +28,7 @@
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace data.is_svip 1 svip 1
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/share response-body-json-replace data.invite_num 5
-^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite response-body-json-replace count 5
+# ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite response-body-json-replace count 5
 [Script]
 http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/WxApp.js, requires-body=true, timeout=60, tag=WxApp
 
