@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Wxapp/WxApp.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-16 15:31:00
+#!date=2025-12-16 16:31:00
 
 [Rule]
 # DOMAIN,mmocgame.qpic.cn
@@ -15,6 +15,7 @@
 # DOMAIN-SUFFIX,gtimg.cn
 
 [Rewrite]
+# 去广告
 ^https?:\/\/wxsmw\.wxs\.qq\.com reject
 ^https?:\/\/wxsnsdy\.wxs\.qq\.com reject
 ^https?:\/\/wxsnsdythumb\.wxs\.qq\.com reject
@@ -22,10 +23,10 @@
 ^https?:\/\/pgdt\.gtimg\.cn reject
 ^https?:\/\/mmocgame\.qpic\.cn reject
 ^https?:\/\/s21\.ax1x\.com reject
-
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.index data.banner data.advertisement
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
+# VIP
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace vip 1 invite_num 5 data.residue_time 4102397476
 # ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/share response-body-json-replace data.invite_num 5
 # ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite response-body-json-replace count 5
