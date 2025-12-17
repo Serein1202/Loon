@@ -1,5 +1,5 @@
 #!name=Lightroom（测试）
-#!desc=
+#!desc=Adobe LightRoom解锁
 #!author=Serein1202[https://github.com/Serein1202]
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/lightroom.png
 #!homepage=https://github.com/Serein1202/Loon
@@ -13,7 +13,7 @@
 [Rewrite]
 
 [Script]
-http-response ^https?:\/\/photos\.adobe\.io\/v2\/accounts\/[^\/]+ script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Lightroom/Lightroom.js, requires-body=true, timeout=60, tag=LightroomVip
+http-response ^https?:\/\/photos\.adobe\.io\/v2\/accounts\/ script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Lightroom/Lightroom.js, requires-body=true, timeout=60, tag=LightroomVip
 
 [MITM]
 hostname = photos.adobe.io
