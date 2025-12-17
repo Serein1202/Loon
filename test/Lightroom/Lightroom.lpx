@@ -13,7 +13,7 @@
 [Rewrite]
 
 [Script]
-http-response ^https?:\/\/photos\.adobe\.io\/v2\/accounts\/[^\/]+ script-path=, requires-body=true, timeout=60, tag=LightroomVip
+http-response ^https?:\/\/photos\.adobe\.io\/v2\/accounts\/[^\/]+ script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Lightroom/Lightroom.js, requires-body=true, timeout=60, tag=LightroomVip
 
 [MITM]
 hostname = photos.adobe.io
