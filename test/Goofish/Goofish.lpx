@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Goofish/Goofish.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-17 19:15:00
+#!date=2025-12-17 19:30:00
 
 [Rule]
 # DOMAIN,acs.m.goofish.com
@@ -31,6 +31,6 @@ http-response ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.
 
 
 [MITM]
-hostname = acs.m.goofish.com
+hostname = acs.m.goofish.com,g-acs.m.goofish.com
 
 
