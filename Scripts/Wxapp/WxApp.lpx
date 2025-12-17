@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Wxapp/WxApp.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-16 16:31:00
+#!date=2025-12-17 19:30:00
 
 [Rule]
 # DOMAIN,mmocgame.qpic.cn
@@ -35,6 +35,6 @@ http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user script-path
 
 
 [MITM]
-hostname = mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
+hostname=mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
 
 
