@@ -31,6 +31,6 @@ http-response ^https?:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.
 
 
 [MITM]
-hostname = acs.m.goofish.com,g-acs.m.goofish.com
+hostname=acs.m.goofish.com,g-acs.m.goofish.com
 
 
