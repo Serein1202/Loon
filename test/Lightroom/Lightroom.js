@@ -1,7 +1,7 @@
 body = $response.body.replace(/while.{7}\n/, "");
 let obj = JSON.parse(body);
 obj.entitlement.status = "subscriber";
-obj.current_subs = {
+obj.entitlement.current_subs = {
     "product_id": "lightroom",
     "store": "adobe",
     "purchase_date": "2025-12-17T08:26:17.664056Z",
