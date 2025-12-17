@@ -1,0 +1,21 @@
+#!name=Lightroom（测试）
+#!desc=
+#!author=Serein1202[https://github.com/Serein1202]
+#!icon=
+#!homepage=https://github.com/Serein1202/Loon
+#!raw-url=
+#!tag=去广告, Serein1202
+#!system=iOS, iPadOS
+#!date=2025-12-17 15:15:00
+
+[Rule]
+
+[Rewrite]
+
+[Script]
+http-response ^https?:\/\/photos\.adobe\.io\/v2\/accounts\/[^\/]+ script-path=, requires-body=true, timeout=60, tag=LightroomVip
+
+[MITM]
+hostname = photos.adobe.io
+
+
