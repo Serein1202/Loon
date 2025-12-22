@@ -16,12 +16,12 @@
 
 [Rewrite]
 # 去广告
-^https?:\/\/ads-tracker\.yourongsj\.com\/ad\/tracking\? reject-dict
-
+^https?:\/\/ads-tracker\.yourongsj\.com\/ad\/tracking\? reject
+^https?:\/\/resource\.teld\.cn\/teldimage\/107\/ reject
 [Script]
 
 
 [MITM]
-hostname=ads-tracker.yourongsj.com
+hostname=ads-tracker.yourongsj.com,resource.teld.cn
 
 
