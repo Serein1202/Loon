@@ -15,6 +15,6 @@
 ^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display($|\?) response-body-json-del data
 ^https?:\/\/energy\.xiaojukeji\.com\/station-api\/search\/preWords\? response-body-json-del data
 [Script]
-
+http-response ^https:\/\/am\.didistatic\.com\/static\/am\/cf-terminal\/epower\/epower-thanos-app\/\d+\.\d+\.\d+\/pages\/people\/index\.js$ script-path=https://kelee.one/Resource/JavaScript/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js, requires-body=true, timeout=60, tag=XiaojvCharge
 [MITM]
 hostname = %APPEND% energy.xiaojukeji.com
