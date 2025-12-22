@@ -17,4 +17,4 @@
 [Script]
 http-response ^https:\/\/am\.didistatic\.com\/static\/am\/cf-terminal\/epower\/epower-thanos-app\/\d+\.\d+\.\d+\/pages\/people\/index\.js$ script-path=https://kelee.one/Resource/JavaScript/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js, requires-body=true, timeout=60, tag=XiaojvCharge
 [MITM]
-hostname = %APPEND% energy.xiaojukeji.com
+hostname = %APPEND% energy.xiaojukeji.com，am.didistatic.com
