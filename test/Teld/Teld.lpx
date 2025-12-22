@@ -1,0 +1,35 @@
+#!name=Teld去广告
+#!desc=
+#!author=Serein1202[https://github.com/Serein1202]
+#!icon=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Icon/qushuiyin.png
+#!homepage=https://github.com/Serein1202/Loon
+#!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Wxapp/WxApp.lpx
+#!tag=去广告, Serein1202
+#!system=iOS, iPadOS
+#!date=2025-12-22 23:30:00
+
+[Rule]
+# DOMAIN,mmocgame.qpic.cn
+# DOMAIN,wxsmw.wxs.qq.com
+# DOMAIN,wximg.wxs.qq.com
+# DOMAIN-SUFFIX,gtimg.cn
+
+[Rewrite]
+# 去广告
+^https?:\/\/ads-tracker\.yourongsj\.com\/ad\/tracking\? reject-dict
+
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/index response-body-json-del data.index data.banner data.advertisement
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/urlresult response-body-json-del data
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/stars response-body-json-del data.ad
+# VIP
+# ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace vip 1 invite_num 5 data.residue_time 4102397476
+^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/share response-body-json-replace data.invite_num 5
+[Script]
+http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/WxApp.js, requires-body=true, timeout=60, tag=WxAppIv
+http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/WxApp.js, requires-body=true, timeout=60, tag=WxAppVip
+
+
+[MITM]
+hostname=mmocgame.qpic.cn,wxsnsdy.wxs.qq.com,wxsnsdythumb.wxs.qq.com,wxsmw.wxs.qq.com,wximg.wxs.qq.com,*.gtimg.cn,analysis.20kaka.cn,s21.ax1x.com
+
+
