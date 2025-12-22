@@ -11,9 +11,7 @@ if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
 }
 
 if (url.includes("gw/mtop.idle.user.page.my.adapter")) {
-  if (url.includes("gw/mtop.idle.user.page.my.adapter")) {
     delete obj.data?.container?.sections?.[8]?.item;
-}
 }
 
 body = JSON.stringify(obj);
