@@ -17,7 +17,7 @@
 [Rewrite]
 # 去广告
 ^https?:\/\/ads-tracker\.yourongsj\.com\/ad\/tracking\? reject
-^https?:\/\/resource\.teld\.cn\/teldimage\/107\/ reject
+^https?:\/\/resource\.teld\.cn\/teldimage\/ reject
 [Script]
 
 
