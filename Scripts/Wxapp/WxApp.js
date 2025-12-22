@@ -1,0 +1,160 @@
+if (!$response.body) {
+  $done({});
+}
+let url = $request.url;
+let body = $response.body;
+let obj = JSON.parse(body);
+if (url.includes("api/wechat_v2/invite")) {
+  const newArray = [
+    {
+      "id": 29038885,
+      "nickname": "游客登陆",
+      "avatarurl": "https://analysis.20kaka.cn/head/01.png",
+      "invite_id": 5805474,
+      "given": null,
+      "max_num": null,
+      "create_time": "1970-01-01 08:00:00",
+      "sort_num": "0",
+      "residue_num": 0,
+      "is_vip": null,
+      "residue_time": "1765795876",
+      "edit_time": null,
+      "lately_time": null,
+      "use_num": 0,
+      "create_time_a": "2025-12-15 18:51:16",
+      "down_time": "",
+      "stars_time": null,
+      "state": 0,
+      "user_info": 0,
+      "from": "单人聊天会话中的小程序消息卡片",
+      "day_num": 0,
+      "ip": null,
+      "is_svip": "0",
+      "code": "0e1s0dll2GH8Pg4imVkl2mqjWA1s0dlW",
+      "minTime": null,
+      "minNum": 0
+    },
+    {
+      "id": 29038885,
+      "nickname": "游客登陆",
+      "avatarurl": "https://analysis.20kaka.cn/head/01.png",
+      "invite_id": 5805474,
+      "given": null,
+      "max_num": null,
+      "create_time": "1970-01-01 08:00:00",
+      "sort_num": "0",
+      "residue_num": 0,
+      "is_vip": null,
+      "residue_time": "1765795876",
+      "edit_time": null,
+      "lately_time": null,
+      "use_num": 0,
+      "create_time_a": "2025-12-15 18:51:16",
+      "down_time": "",
+      "stars_time": null,
+      "state": 0,
+      "user_info": 0,
+      "from": "单人聊天会话中的小程序消息卡片",
+      "day_num": 0,
+      "ip": null,
+      "is_svip": "0",
+      "code": "0e1s0dll2GH8Pg4imVkl2mqjWA1s0dlW",
+      "minTime": null,
+      "minNum": 0
+    },
+    {
+      "id": 29038885,
+      "nickname": "游客登陆",
+      "avatarurl": "https://analysis.20kaka.cn/head/01.png",
+      "invite_id": 5805474,
+      "given": null,
+      "max_num": null,
+      "create_time": "1970-01-01 08:00:00",
+      "sort_num": "0",
+      "residue_num": 0,
+      "is_vip": null,
+      "residue_time": "1765795876",
+      "edit_time": null,
+      "lately_time": null,
+      "use_num": 0,
+      "create_time_a": "2025-12-15 18:51:16",
+      "down_time": "",
+      "stars_time": null,
+      "state": 0,
+      "user_info": 0,
+      "from": "单人聊天会话中的小程序消息卡片",
+      "day_num": 0,
+      "ip": null,
+      "is_svip": "0",
+      "code": "0e1s0dll2GH8Pg4imVkl2mqjWA1s0dlW",
+      "minTime": null,
+      "minNum": 0
+    },
+    {
+      "id": 29038885,
+      "nickname": "游客登陆",
+      "avatarurl": "https://analysis.20kaka.cn/head/01.png",
+      "invite_id": 5805474,
+      "given": null,
+      "max_num": null,
+      "create_time": "1970-01-01 08:00:00",
+      "sort_num": "0",
+      "residue_num": 0,
+      "is_vip": null,
+      "residue_time": "1765795876",
+      "edit_time": null,
+      "lately_time": null,
+      "use_num": 0,
+      "create_time_a": "2025-12-15 18:51:16",
+      "down_time": "",
+      "stars_time": null,
+      "state": 0,
+      "user_info": 0,
+      "from": "单人聊天会话中的小程序消息卡片",
+      "day_num": 0,
+      "ip": null,
+      "is_svip": "0",
+      "code": "0e1s0dll2GH8Pg4imVkl2mqjWA1s0dlW",
+      "minTime": null,
+      "minNum": 0
+    },
+    {
+      "id": 29038885,
+      "nickname": "游客登陆",
+      "avatarurl": "https://analysis.20kaka.cn/head/01.png",
+      "invite_id": 5805474,
+      "given": null,
+      "max_num": null,
+      "create_time": "1970-01-01 08:00:00",
+      "sort_num": "0",
+      "residue_num": 0,
+      "is_vip": null,
+      "residue_time": "1765795876",
+      "edit_time": null,
+      "lately_time": null,
+      "use_num": 0,
+      "create_time_a": "2025-12-15 18:51:16",
+      "down_time": "",
+      "stars_time": null,
+      "state": 0,
+      "user_info": 0,
+      "from": "单人聊天会话中的小程序消息卡片",
+      "day_num": 0,
+      "ip": null,
+      "is_svip": "0",
+      "code": "0e1s0dll2GH8Pg4imVkl2mqjWA1s0dlW",
+      "minTime": null,
+      "minNum": 0
+    }
+  ];
+  obj.count = 5;
+  obj.data = newArray;
+}
+if (url.includes("api/wechat_v2/user")) {
+  obj.data.residue_time = 4102397476;
+  obj.invite_num = 5;
+  obj.vip = 1;
+  obj.residue_time = "2099-12-18 18:51"
+}
+body = JSON.stringify(obj);
+$done({ body });
