@@ -1,12 +1,12 @@
 #!name=Teld去广告
-#!desc=
+#!desc=针对Teld广告进行拦截，要重新安装清除缓存拦截广告才会生效！
 #!author=Serein1202[https://github.com/Serein1202]
-#!icon=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Icon/qushuiyin.png
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/GotoCharge.png
 #!homepage=https://github.com/Serein1202/Loon
-#!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Wxapp/WxApp.lpx
+#!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Teld/Teld.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-23 15:30:00
+#!date=2025-12-23 16:30:00
 
 [Rule]
 # DOMAIN,mmocgame.qpic.cn
@@ -22,6 +22,6 @@
 http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
-hostname=resource.teld.cn,sg.teld.cn
+hostname=hubcloud.com.cn,sg.teld.cn
 
 
