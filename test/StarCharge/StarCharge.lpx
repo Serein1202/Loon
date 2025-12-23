@@ -1,0 +1,23 @@
+#!name=StarCharge去广告
+#!desc=针对StarCharge广告进行拦截，要重新安装清除缓存拦截广告才会生效！
+#!author=Serein1202[https://github.com/Serein1202]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/GotoCharge.png
+#!homepage=https://github.com/Serein1202/Loon
+#!raw-url=https://github.com/Serein1202/Loon/blob/main/test/StarCharge/StarCharge.lpx
+#!tag=去广告, Serein1202
+#!system=iOS, iPadOS
+#!date=2025-12-23 19:30:00
+
+[Rule]
+
+[Rewrite]
+# 去广告
+^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/advertisement reject
+
+
+[Script]
+http-response ^https?:\/\/gateway\.starcharge\.com script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=StarChargeAd
+[MITM]
+hostname = gateway.starcharge.com
+
+
