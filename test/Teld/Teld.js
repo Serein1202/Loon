@@ -24,10 +24,10 @@ if (url.includes("api/invoke?SID=CMS-GetSysReleaseWithLatest")) {
     obj.data={};
     // obj.state=0;
 }
-// if (url.includes("api/invoke?SID=CMS-GetCityChangedResources")) {
-    // obj.data=[];
-    // obj.state=0;
-// }
+if (url.includes("api/invoke?SID=CMS-GetCityChangedResources")) {
+    obj.data=[];
+    obj.state=0;
+}
 if (url.includes("api/invoke?SID=App-CheckHealthStateV2")) {
     obj.state=0;
 }
