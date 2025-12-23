@@ -18,6 +18,9 @@
 ^https?:\/\/gateway-app\.starcharge\.com\/app\/apiV2\/widget reject-dict
 ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/bankcard reject-dict
 
+^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/car\/user\/function response-body-json-del data
+
+
 
 
 [Script]
