@@ -22,6 +22,6 @@
 http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
-hostname=ads-tracker.yourongsj.com,resource.teld.cn,sg.teld.cn
+hostname=resource.teld.cn,sg.teld.cn
 
 
