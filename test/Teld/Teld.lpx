@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Teld/Teld.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-23 17:30:00
+#!date=2025-12-23 18:30:00
 
 [Rule]
 
@@ -21,6 +21,6 @@
 # http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
-hostname = hubcloud.com.cn,beizi.biz
+hostname = hubcloud.com.cn,beizi.biz,sg.teld.cn
 
 
