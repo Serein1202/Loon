@@ -6,23 +6,19 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Teld/Teld.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-23 17:00:00
+#!date=2025-12-23 17:30:00
 
 [Rule]
-# DOMAIN,mmocgame.qpic.cn
-# DOMAIN,wxsmw.wxs.qq.com
-# DOMAIN,wximg.wxs.qq.com
-# DOMAIN-SUFFIX,gtimg.cn
 
 [Rewrite]
 # 去广告
 ^https?:\/\/v\.adx\.hubcloud\.com\.cn\/adx reject
 ^https?:\/\/sdk\.beizi\.biz\/v1\/api reject
 ^https?:\/\/api-htp\.beizi\.biz reject
-^https?:\/\/resource\.teld\.cn\/teldimage\/107 reject-img
+# ^https?:\/\/resource\.teld\.cn\/teldimage\/107 reject-img
 
 [Script]
-# http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
+http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
 hostname = hubcloud.com.cn, sg.teld.cn, beizi.biz, resource.teld.cn
