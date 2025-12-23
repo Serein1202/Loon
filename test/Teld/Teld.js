@@ -13,7 +13,7 @@ if (url.includes("api/invoke?SID=CMS-GetMergePromoEntry")) {
 //     // obj.statr=0;
 // }
 if (url.includes("api/invoke?SID=CMS-GetConfigRelease")) {
-    obj,data.ConfigContent={};
+    obj.data.ConfigContent={};
     // obj.statr=0;
 }
 if (url.includes("api/invoke?SID=ProSrv-GetInviteNewActivityInfo")) {
