@@ -21,6 +21,6 @@
 # http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
-hostname = hubcloud.com.cn, sg.teld.cn, beizi.biz
+# hostname = hubcloud.com.cn, sg.teld.cn, beizi.biz
 
 
