@@ -13,6 +13,8 @@
 [Rewrite]
 # 去广告
 ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/advertisement reject
+^https?:\/\/zhuge\.starcharge\.com\/web_event reject
+^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/memberLevel\/stubGroup\/memberAd reject
 
 
 [Script]
