@@ -14,7 +14,7 @@
 # 去广告
 ^https?:\/\/v\.adx\.hubcloud\.com\.cn\/adx reject
 ^https?:\/\/sdk\.beizi\.biz\/v1\/api reject
-^https?:\/\/api-htp\.beizi\.biz reject
+# ^https?:\/\/api-htp\.beizi\.biz reject
 # ^https?:\/\/resource\.teld\.cn\/teldimage\/107 reject-img
 
 [Script]
