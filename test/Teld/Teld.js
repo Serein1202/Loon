@@ -8,10 +8,6 @@ if (url.includes("api/invoke?SID=CMS-GetMergePromoEntry")) {
     obj.data=[];
     // obj.state=0;
 }
-// if (url.includes("api/invoke?SID=CMS-GetFindTabsNew")) {
-//     obj.data=[];
-//     // obj.state=0;
-// }
 if (url.includes("api/invoke?SID=CMS-GetConfigRelease")) {
     obj.data.ConfigContent={};
     // obj.state=0;
