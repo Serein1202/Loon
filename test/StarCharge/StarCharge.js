@@ -5,9 +5,7 @@ let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
 if (url.includes("/apph5/webApiV2/car/user/function")) {
-    obj.data = {
-        "menuVO": []
-    };
+    delete obj.data;
 }
 if (url.includes("/apph5/webApiV2/system/systemInfo")) {
     obj.data.aiChatSwitch = 0;
