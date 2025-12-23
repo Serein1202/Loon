@@ -12,15 +12,15 @@
 
 [Rewrite]
 # 去广告
-# ^https?:\/\/v\.adx\.hubcloud\.com\.cn\/adx reject
-# ^https?:\/\/sdk\.beizi\.biz\/v1\/api reject
-# ^https?:\/\/api-htp\.beizi\.biz reject
+^https?:\/\/v\.adx\.hubcloud\.com\.cn\/adx reject
+^https?:\/\/sdk\.beizi\.biz\/v1\/api reject
+^https?:\/\/api-htp\.beizi\.biz reject
 # ^https?:\/\/resource\.teld\.cn\/teldimage\/107 reject-img
 
 [Script]
 # http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
-# hostname = hubcloud.com.cn, sg.teld.cn, beizi.biz
+hostname = hubcloud.com.cn,beizi.biz
 
 
