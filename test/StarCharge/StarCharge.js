@@ -3250,12 +3250,7 @@ webpackJsonp([5], {
 				var t = this,
 					e = t.$createElement,
 					r = t._self._c || e;
-				return r("div", {
-					staticClass: "adv-list",
-					style: {
-						"padding-bottom": t.bottomBarHeight / 75 + "rem"
-					}
-				}, [r("div", {
+				return r("div", [r("div", {
 					staticClass: "title"
 				}, [t._v("\n    " + t._s(t.advList.length && 76 === t.advList[0].type ? t.brandName + "×星星充电 联合会员权益" : "会员权益") + "\n  ")]), t._v(" "), r("div", {
 					staticClass: "imgs"
