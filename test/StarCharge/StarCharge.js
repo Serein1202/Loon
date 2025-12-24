@@ -3066,7 +3066,7 @@ webpackJsonp([5], {
 					}).then(function(e) {
 						t.$isHarmony ? t.privateCarAdvs = e.menuVO.filter(function(t) {
 							return "路径规划" !== t.name
-						}) : t.privateCarAdvs = e.menuVO, t.serviceCarAdvs = e.adVO
+						}) : t.privateCarAdvs = e.menuVO
 					}).catch(function(e) {
 						t.$toast.show(e.text || "")
 					})
