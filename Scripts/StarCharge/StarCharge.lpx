@@ -6,17 +6,17 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/Scripts/StarCharge/StarCharge.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-24 20:30:00
+#!date=2025-12-25 22:30:00
 
 [Rule]
 
 [Rewrite]
 # 去广告
 # ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/advertisement reject
-^https?:\/\/zhuge\.starcharge\.com reject
+# ^https?:\/\/zhuge\.starcharge\.com reject
 # ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/memberLevel\/stubGroup\/memberAd reject
 ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/bankcard reject
-^https?:\/\/gateway\.starcharge\.com\/apph5\/webApi\/find\/getAdvertisementInfo reject
+# ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApi\/find\/getAdvertisementInfo reject
 
 # ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/car\/user\/function response-body-json-del data
 
