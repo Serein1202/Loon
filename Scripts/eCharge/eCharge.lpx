@@ -17,6 +17,6 @@
 ^https?:\/\/cdn-evone-oss\.echargenet\.com\/cms_img reject
 
 [Script]
-http-response ^https?:\/\/api-evone\.echargenet\.com\/gw\/evone\.echargeapi\.open\.home\.quicklabel\/1\.0 script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Script/eCharge/eCharge.js, requires-body=true, timeout=60, tag=eChargeAd
+http-response ^https?:\/\/api-evone\.echargenet\.com\/gw\/evone\.echargeapi\.open\.home\.quicklabel\/1\.0 script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/eCharge/eCharge.js, requires-body=true, timeout=60, tag=eChargeAd
 [MITM]
 hostname = api-evone.echargenet.com,api-evone.echargenet.com,yxyylog.echargenet.com
