@@ -18,7 +18,7 @@
 # ^https?:\/\/resource\.teld\.cn\/teldimage\/107 reject-img
 
 [Script]
-http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
+http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://kelee.one/Resource/JavaScript/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
 hostname = hubcloud.com.cn,beizi.biz,sg.teld.cn
