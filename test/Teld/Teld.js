@@ -24,6 +24,7 @@ if (url.includes("SID=CMS-GetSysReleaseWithLatest")) {
     obj.data={};
     // obj.state=0;
 }
+
 if (url.includes("SID=CMS-GetCityChangedResources")) {
     obj.data=[];
     // obj.state=0;
