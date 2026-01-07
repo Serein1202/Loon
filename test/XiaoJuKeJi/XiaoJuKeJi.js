@@ -1869,10 +1869,6 @@
 					for (var t in e) o.style[t] = e[t]
 				})), "function" == typeof __register_static_styles__ && __register_static_styles__(o._scopeId, i), e.exports = r
 			},
-			69185: function(e, t, n) {
-				var r, o, i = [];
-				i.push(n(44812)), r = n(99554);
-			},
 			79264: function(e, t, n) {
 				var r, o, i = [];
 				i.push(n(90254)), r = n(59896);
@@ -3784,183 +3780,215 @@
 				}
 			},
 			51033: function(e) {
-	e.exports = {
-		render: function () {
-			var e = this,
-				t = e.$createElement,
-				n = e._self._c || t;
-			return n("ThanosView", {
-				staticClass: ["base-card-container"]
-			}, [e.isDidiWxMiniApp || e.isUnionPay ? e._e() : n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toOccupied",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toOccupied
+				e.exports = {
+					render: function() {
+						var e = this,
+							t = e.$createElement,
+							n = e._self._c || t;
+						return n("ThanosView", {
+							staticClass: ["base-card-container"]
+						}, [e.isDidiWxMiniApp || e.isUnionPay ? e._e() : n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toOccupied",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toOccupied
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/n1t0h1ro0pmiyg3kc6_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("超时占用订单")])], 1), n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toCouponOrderList",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toCouponOrderList
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/n1t0h1rnytmizt1rwi_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("券包订单")])], 1), !e.isH5 || e.isFromQishika || e.isDidiWxMiniApp ? n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toHelpPage",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toHelpPage
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/gnbmf0s28dg5miyg498o_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("客服中心")])], 1) : e._e(), (e.isPassengerApp || e.isDriverApp || e.isMiniApp || e.isXiaojuChargingApp) && e.checkLogin && !e.isDidiWxMiniApp ? n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toTicketPage",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toTicketPage
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/144p2r1jjm8miyg4lgx_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("充电开票")])], 1) : e._e(), e.isDidiWxMiniApp ? e._e() : n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toParkingAppeal",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toParkingAppeal
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/n1t0h1ro0pmiyg51ea_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("停车费申诉")])], 1), !e.isDriverApp && !e.isWx || e.isHeguiApp || !e.checkLogin || e.isDidiWxMiniApp ? e._e() : n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "openPnC",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.openPnC
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/gnbmf0s7ya2miyg5f8e_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("即插即充")]), e.showOpenIcon ? n("ThanosImage", {
+							staticClass: ["open-icon"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/3h3hp1u8rbulcfw2cno_80x41_compress.png"
+							}
+						}) : e._e()], 1), e.isDidiWxMiniApp ? e._e() : n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toBatteryHealth",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toBatteryHealth
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/144p2r1jjm8miyg5vft_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("电池检测")])], 1), n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toStationBenefitList",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toStationBenefitList
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/n1t0h15yxpmiyg68gg_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("桩站特权")])], 1), (e.isWx || e.isXiaojuChargingApp) && e.showCarChargeEntry && e.checkLogin ? n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toCarCharge",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toCarCharge
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/gnbmf0s7ibymizt1me1_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("车队充电")])], 1) : e._e(), e.isPassengerApp || e.isWx || e.isXiaojuChargingApp ? n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toCooperation",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toCooperation
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/gnbmf0s7yjqmiyg6z77_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("我要合作")])], 1) : e._e(), e.checkLogin ? n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toUnableDrawGun",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toUnableDrawGun
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/144p2r1jjm8mj2osxoh_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("无法拔枪")])], 1) : e._e(), e.isXiaojuChargingApp || e.customNavBar ? e._e() : n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toSetting",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toSetting
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["imag"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/gnbmf0s7ibymizt1ted_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("设置")])], 1)], 1)
+					},
+					staticRenderFns: []
 				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/n1t0h1ro0pmiyg3kc6_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("超时占用订单")])], 1), n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toCouponOrderList",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toCouponOrderList
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/n1t0h1rnytmizt1rwi_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("券包订单")])], 1), !e.isH5 || e.isFromQishika || e.isDidiWxMiniApp ? n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toHelpPage",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toHelpPage
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/gnbmf0s28dg5miyg498o_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("客服中心")])], 1) : e._e(), (e.isPassengerApp || e.isDriverApp || e.isMiniApp || e.isXiaojuChargingApp) && e.checkLogin && !e.isDidiWxMiniApp ? n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toTicketPage",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toTicketPage
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/144p2r1jjm8miyg4lgx_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("充电开票")])], 1) : e._e(), e.isDidiWxMiniApp ? e._e() : n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toParkingAppeal",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toParkingAppeal
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/n1t0h1ro0pmiyg51ea_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("停车费申诉")])], 1), !e.isDriverApp && !e.isWx || e.isHeguiApp || !e.checkLogin || e.isDidiWxMiniApp ? e._e() : n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "openPnC",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.openPnC
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/gnbmf0s7ya2miyg5f8e_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("即插即充")]), e.showOpenIcon ? n("ThanosImage", {
-				staticClass: ["open-icon"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/3h3hp1u8rbulcfw2cno_80x41_compress.png"
-				}
-			}) : e._e()], 1), e.isDidiWxMiniApp ? e._e() : n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toBatteryHealth",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toBatteryHealth
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/n1t0h15yxpmiyg68gg_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("桩站特权")])], 1), (e.isWx || e.isXiaojuChargingApp) && e.showCarChargeEntry && e.checkLogin ? n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toCarCharge",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toCarCharge
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/gnbmf0s7ibymizt1me1_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("车队充电")])], 1) : e._e(), e.isPassengerApp || e.isWx || e.isXiaojuChargingApp ? n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toCooperation",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toCooperation
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/144p2r1jjm8mj2osxoh_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("无法拔枪")])], 1) : e._e(), e.isXiaojuChargingApp || e.customNavBar ? e._e() : n("ThanosView", {
-				staticClass: ["item-wrapper"],
-				attrs: {
-					prismFunctionName: "toSetting",
-					prismClassName: "item-wrapper"
-				},
-				on: {
-					click: e.toSetting
-				}
-			}, [n("ThanosImage", {
-				staticClass: ["imag"],
-				attrs: {
-					src: "https://view.didistatic.com/static/dcms/gnbmf0s7ibymizt1ted_128x128.png"
-				}
-			}), n("ThanosText", {
-				staticClass: ["item-title"]
-			}, [e._v("设置")])], 1)], 1)
-		},
-		staticRenderFns: []
-	}
-},
+			},
 			2605: function(e) {
 				e.exports = {
 					render: function() {
@@ -4033,6 +4061,35 @@
 						}), n("ThanosText", {
 							staticClass: ["item-title"]
 						}, [e._v("我的奖励")])], 1)], 1)
+					},
+					staticRenderFns: []
+				}
+			},
+			734: function(e) {
+				e.exports = {
+					render: function() {
+						var e = this,
+							t = e.$createElement,
+							n = e._self._c || t;
+						return n("ThanosView", {
+							staticClass: ["item-wrapper"],
+							attrs: {
+								prismFunctionName: "toChargeLowCarbon",
+								prismClassName: "item-wrapper"
+							},
+							on: {
+								click: e.toChargeLowCarbon
+							}
+						}, [n("ThanosImage", {
+							staticClass: ["item-img"],
+							attrs: {
+								src: "https://view.didistatic.com/static/dcms/gnbmf0s7yjqmiyg0r38_128x128.png"
+							}
+						}), n("ThanosText", {
+							staticClass: ["item-title"]
+						}, [e._v("低碳家园")]), n("ThanosText", {
+							staticClass: ["item-slogan"]
+						}, [e._v("赚币当钱花")])], 1)
 					},
 					staticRenderFns: []
 				}
@@ -30910,8 +30967,6 @@
 					g = n.n(h),
 					m = n(12005),
 					v = n.n(m),
-					y = n(69185),
-					b = n.n(y),
 					w = n(4740),
 					_ = n.n(w),
 					x = n(17178),
