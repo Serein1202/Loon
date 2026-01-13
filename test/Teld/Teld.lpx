@@ -6,23 +6,24 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Teld/Teld.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2026-01-05 15:45:00
+#!date=2026-01-13 16:45:00
 
 [Rule]
 
 [Rewrite]
 # 去广告
-^https?:\/\/wxsmw\.wxs\.qq\.com reject-dict
-^https?:\/\/wximg\.wxs\.qq\.com reject-dict
-^https:\/\/res\.wx\.qq\.com reject-dict
-^https:\/\/servicewechat\.com reject-dict
-^https?:\/\/wxa\.wxs\.qq\.com\/images\/wxapp reject-dict
-^https:\/\/resource\.teld\.cn\/teldimage\/107\/[0-9a-f]{32}\.(?:png|jpg) reject-dict
-
+^https?:\/\/wxsmw\.wxs\.qq\.com reject
+^https?:\/\/wximg\.wxs\.qq\.com reject
+^https:\/\/res\.wx\.qq\.com reject
+^https:\/\/servicewechat\.com reject
+^https?:\/\/wxa\.wxs\.qq\.com\/images\/wxapp reject
+^https:\/\/resource\.teld\.cn\/teldimage\/107\/[0-9a-f]{32}\.(?:png|jpg) reject
+# 微信小程序去开屏广告测试
+^https?:\/\/sh\.servicewechat\.com reject
 [Script]
 http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
-hostname = wxsmw.wxs.qq.com,wximg.wxs.qq.com,wxa.wxs.qq.com,resource.teld.cn,sg.teld.cn
+hostname = %APPEND% wxsmw.wxs.qq.com,wximg.wxs.qq.com,wxa.wxs.qq.com,resource.teld.cn,sg.teld.cn,sh.servicewechat.com
 
 
