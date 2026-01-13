@@ -19,14 +19,16 @@
 ^https?:\/\/wxa\.wxs\.qq\.com\/images\/wxapp reject
 ^https:\/\/resource\.teld\.cn\/teldimage\/107\/[0-9a-f]{32}\.(?:png|jpg) reject
 # 微信小程序去开屏广告测试
-^https?:\/\/sh\.servicewechat\.com reject
-^https?:\/\/support\.weixin\.qq\.com reject
-^https?:\/\/launchwxacode\.wxqcloud\.qq\.com\.cn reject
-^https?:\/\/umini\.shujupie\.com reject
+# ^https?:\/\/sh\.servicewechat\.com reject
+# ^https?:\/\/support\.weixin\.qq\.com reject
+# ^https?:\/\/launchwxacode\.wxqcloud\.qq\.com\.cn reject
+# ^https?:\/\/umini\.shujupie\.com reject
+^https?:\/\/szminorshort\.weixin\.qq\.com reject
+^https?:\/\/szextshort\.weixin\.qq\.com reject
 [Script]
 # http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
-hostname = %APPEND% wxsmw.wxs.qq.com,wximg.wxs.qq.com,wxa.wxs.qq.com, resource.teld.cn,sg.teld.cn,sh.servicewechat.com,support.weixin.qq.com,launchwxacode.wxqcloud.qq.com.cn,umini.shujupie.com
+hostname = %APPEND% wxsmw.wxs.qq.com,wximg.wxs.qq.com,wxa.wxs.qq.com, resource.teld.cn,sg.teld.cn,szextshort.weixin.qq.com,szminorshort.weixin.qq.com
 
 
