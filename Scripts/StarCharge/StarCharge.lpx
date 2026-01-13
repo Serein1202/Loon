@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/Scripts/StarCharge/StarCharge.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2025-12-25 22:35:00
+#!date=2026-01-13 18:30:45
 
 [Rule]
 
@@ -21,7 +21,7 @@
 # ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/car\/user\/function response-body-json-del data
 
 [Script]
-# http-response ^https?:\/\/app-cdn\.starcharge\.com\/wap\/static\/starCharge\/js\/5\.b28643fc809a9aaa2cb5\.js$ script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=StarChargeAd
+http-response ^https?:\/\/gateway\.starcharge\.com\/app\/apiV2\/app\/menu\/v2\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=StarChargeAd
 [MITM]
 hostname = gateway.starcharge.com,gateway.sccncdn.com,app-cdn.starcharge.com,zhuge.starcharge.com,gateway-app.starcharge.com
 
