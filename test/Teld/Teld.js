@@ -4,6 +4,10 @@ if (!$response.body) {
 let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
+if (url.includes("SID=CMS-GetMPBannerByType")) {
+    obj.data=[];
+    // obj.state=0;
+}
 if (url.includes("SID=CMS-GetMergePromoEntry")) {
     obj.data=[];
     // obj.state=0;
