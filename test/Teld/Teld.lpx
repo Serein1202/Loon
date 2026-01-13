@@ -26,6 +26,6 @@
 http-response ^https?:\/\/sg\.teld\.cn\/api\/invoke\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Teld/Teld.js, requires-body=true, timeout=60, tag=TeldAd
 
 [MITM]
-hostname = %APPEND% wxsmw.wxs.qq.com,wximg.wxs.qq.com,wxa.wxs.qq.com, resource.teld.cn,sg.teld.cn,sh.servicewechat.com,support.weixin.qq.com
+hostname = %APPEND% wxsmw.wxs.qq.com,wximg.wxs.qq.com,wxa.wxs.qq.com, resource.teld.cn,sg.teld.cn,sh.servicewechat.com,support.weixin.qq.com,launchwxacode.wxqcloud.qq.com.cn
 
 
