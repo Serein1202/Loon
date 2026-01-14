@@ -183,6 +183,7 @@ if (url.includes("/app/v2/apiV2/system/info")) {
 		"batteryReportOriginPrice": "9.9",
 		"batteryReportSalePrice": "1",
 		"appAdvertisementSort": 0,
+		"homeEntrances": "",
 		"oldPaymentOptions": 0
 	};
 }
