@@ -25,6 +25,6 @@ http-response ^https?:\/\/gateway\.starcharge\.com\/app\/apiV2\/app\/menu\/v2\? 
 http-response ^https?:\/\/gateway-app\.starcharge\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=StarChargeAD
 http-response ^https?:\/\/gateway\.sccncdn\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=StarChargeAD
 [MITM]
-hostname = gateway.starcharge.com,gateway.sccncdn.com,app-cdn.starcharge.com,zhuge.starcharge.com,gateway-app.starcharge.com
+hostname = %APPEND% gateway.starcharge.com,gateway.sccncdn.com,app-cdn.starcharge.com,zhuge.starcharge.com,gateway-app.starcharge.com,smartop-sdkapi.jiguang.cn
 
 
