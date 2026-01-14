@@ -6,7 +6,7 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/Scripts/StarCharge/StarCharge.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2026-01-15 01:30:46
+#!date=2026-01-15 02:30:46
 
 [Rule]
 
@@ -21,10 +21,16 @@
 # ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/car\/user\/function response-body-json-del data
 
 [Script]
-http-response ^https?:\/\/gateway\.starcharge\.com\/app\/apiV2\/app\/menu\/v2\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeMine.js, requires-body=true, timeout=60, tag=我的页面优化
-http-response ^https?:\/\/gateway-app\.starcharge\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeIndex.js, requires-body=true, timeout=60, tag=主页优化
-http-response ^https?:\/\/gateway\.sccncdn\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeIndex.js, requires-body=true, timeout=60, tag=主页优化
+# http-response ^https?:\/\/gateway\.starcharge\.com\/app\/apiV2\/app\/menu\/v2\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeMine.js, requires-body=true, timeout=60, tag=我的页面优化
+# http-response ^https?:\/\/gateway-app\.starcharge\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeIndex.js, requires-body=true, timeout=60, tag=主页优化
+# http-response ^https?:\/\/gateway\.sccncdn\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeIndex.js, requires-body=true, timeout=60, tag=主页优化
+# http-response ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/stubGroup\/search\/filters\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeIndex.js, requires-body=true, timeout=60, tag=主页优化
+http-response ^https?:\/\/gateway\.starcharge\.com\/app\/apiV2\/app\/menu\/v2\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=我的页面优化
+http-response ^https?:\/\/gateway-app\.starcharge\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=主页优化
+http-response ^https?:\/\/gateway\.sccncdn\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=主页优化
+http-response ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/stubGroup\/search\/filters\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.js, requires-body=true, timeout=60, tag=主页优化
+
 [MITM]
-hostname = gateway.starcharge.com,gateway.sccncdn.com,app-cdn.starcharge.com,zhuge.starcharge.com,gateway-app.starcharge.com,smartop-sdkapi.jiguang.cn
+hostname = gateway.starcharge.com,gateway.sccncdn.com,zhuge.starcharge.com,gateway-app.starcharge.com,smartop-sdkapi.jiguang.cn
 
 
