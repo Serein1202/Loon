@@ -27,7 +27,7 @@ obj.data = {
     "batteryReportOriginPrice": "9.9",
     "batteryReportSalePrice": "1",
     "appAdvertisementSort": 1,
-    "homeEntrances": "[{\"name\":\"券包\",\"refType\":0,\"refUrl\":\"40\",\"isUser\":1,\"icon\":\"https://activity-h5.starcharge.com/wechat/wechatImgs/index/entrances-coupon.png\"},{\"name\":\"抽奖\",\"refType\":1,\"refUrl\":\"https://osmp-h5.starcharge.com/#/pages/luckyDraw/index?activityId=f9642caf-391e-472d-a875-372343152257\",\"isUser\":1,\"icon\":\"https://activity-h5.starcharge.com/wechat/wechatImgs/index/entrances-lottery.png\"},{\"name\":\"会员\",\"refType\":\"1\",\"refUrl\":\"https://app-taro.starcharge.com/pages/member/purchase/index\",\"isUser\":1,\"icon\":\"https://activity-h5.starcharge.com/wechat/wechatImgs/index/entrances-vip.png\"}]",
+    "homeEntrances": "[]",
     "oldPaymentOptions": 0
 }
 body = JSON.stringify(obj);
