@@ -158,7 +158,7 @@ if (url.includes("/app/apiV2/app/menu/v2")) {
 				}
 			]
 		}];
-}
+};
 if (url.includes("/app/v2/apiV2/system/info")) {
 	obj.data = {
 		"isEmergencyModel": 0,
@@ -186,9 +186,6 @@ if (url.includes("/app/v2/apiV2/system/info")) {
 		"homeEntrances": "",
 		"oldPaymentOptions": 0
 	};
-}
-if (url.includes("/app/apiV2/stubGroup/search/filters")) {
-	obj.data = {};
-}
+};
 body = JSON.stringify(obj);
 $done({ body });
