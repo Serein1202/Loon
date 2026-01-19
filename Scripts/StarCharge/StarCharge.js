@@ -4,7 +4,8 @@ if (!$response.body) {
 let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
-obj.data = [
+if (url.includes("/app/apiV2/app/menu/v2")) {
+	obj.data = [
 		{
 			"title": "充电服务",
 			"sort": 0,
@@ -157,5 +158,34 @@ obj.data = [
 				}
 			]
 		}];
+};
+if (url.includes("/app/v2/apiV2/system/info")) {
+	obj.data = {
+		"isEmergencyModel": 0,
+		"androidLogSwitch": 0,
+		"iosLogSwitch": 1,
+		"androidTaroSwitch": 1,
+		"iosTaroSwitch": 1,
+		"chargingOrderKwSwitch": 1,
+		"plugVinSwitch": 1,
+		"privateStubNewVersionSwitch": 1,
+		"operateCategoryIconSwitch": 0,
+		"operateCategoryIconUrl": "https://app-taro.starcharge.com/pages/introductionPage/index?title=电站运营类型&images=operationType-1,operationType-2",
+		"aiChatSwitch": 0,
+		"chargeCodeAdSwitch": 0,
+		"chargeCodeAdSecond": 3,
+		"connectingAdSwitch": 0,
+		"optionMemberShow": 1,
+		"eightTwoEgihtlabSwitch": 0,
+		"pendingPaymentMemberShow": 0,
+		"memberPageSurplusdayShow": 0,
+		"memberBuySurplusdayShow": 0,
+		"batteryReportOriginPrice": "9.9",
+		"batteryReportSalePrice": "1",
+		"appAdvertisementSort": 0,
+		"homeEntrances": "",
+		"oldPaymentOptions": 0
+	};
+};
 body = JSON.stringify(obj);
 $done({ body });
