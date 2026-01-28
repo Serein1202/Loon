@@ -6,10 +6,11 @@
 #!raw-url=https://github.com/Serein1202/Loon/blob/main/Scripts/StarCharge/StarCharge.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2026-01-28 17:00:46
+#!date=2026-01-28 18:00:46
 
 [Rule]
 DOMAIN,jiguang.cn,REJECT
+DOMAIN,jpush.cn,REJECT
 [Rewrite]
 # 去广告
 ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/advertisement reject
@@ -19,7 +20,7 @@ DOMAIN,jiguang.cn,REJECT
 ^https?:\/\/gateway\.sccncdn\.com\/app\/api\/advertisement reject
 ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/memberLevel\/stubGroup\/memberAd reject
 ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/bankcard reject
-^https?:\/\/activity-h5\.starcharge\.com\/wechat\/wechatImgs\/index\/defaultBanner\.png reject-img
+^https?:\/\/activity-h5\.starcharge\.com\/wechat\/wechatImgs\/index\/defaultBanner\.png reject-200
 # ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/car\/user\/function response-body-json-del data
 
 [Script]
