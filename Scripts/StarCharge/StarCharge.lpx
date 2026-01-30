@@ -15,19 +15,18 @@ DOMAIN,jpush.cn,REJECT
 # 去广告
 ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/advertisement reject
 ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApi\/find\/getAdvertisementInfo reject
-^https?:\/\/zhuge\.starcharge\.com reject
 ^https?:\/\/gateway\.sccncdn\.com\/app\/v2\/apiV2\/advertisement reject
 ^https?:\/\/gateway\.sccncdn\.com\/app\/api\/advertisement reject
 ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/memberLevel\/stubGroup\/memberAd reject
 ^https?:\/\/gateway\.sccncdn\.com\/app\/apiV2\/bankcard reject
-# ^https?:\/\/activity-h5\.starcharge\.com\/wechat\/wechatImgs\/index\/defaultBanner\.png reject-200
+^https?:\/\/activity-h5\.starcharge\.com\/wechat\/wechatImgs\/index\/defaultBanner\.png reject-200
 # ^https?:\/\/gateway\.starcharge\.com\/apph5\/webApiV2\/car\/user\/function response-body-json-del data
 
 [Script]
 http-response ^https?:\/\/gateway\.starcharge\.com\/app\/apiV2\/app\/menu\/v2\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeMine.js, requires-body=true, timeout=60, tag=我的页面优化
-http-response ^https?:\/\/gateway-app\.starcharge\.com\/app\/api\/system\/systemInfo\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeIndex.js, requires-body=true, timeout=60, tag=主页优化
-http-response ^https?:\/\/activity-h5\.starcharge\.com\/wechat\/wechatImgs\/index\/defaultBanner\.png script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/banner.png, requires-body=true, timeout=60, tag=banner隐藏
+http-response ^https?:\/\/gateway-app\.starcharge\.com\/app\/v2\/apiV2\/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeIndex.js, requires-body=true, timeout=60, tag=主页优化
+http-response ^https?:\/\/gateway\.sccncdn\.com\/app\/v2\/apiV2/system\/info\? script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarChargeIndex.js, requires-body=true, timeout=60, tag=主页优化
 [MITM]
-hostname = gateway.starcharge.com,gateway.sccncdn.com,zhuge.starcharge.com,gateway-app.starcharge.com,smartop-sdkapi.jiguang.cn,activity-h5.starcharge.com
+hostname = gateway.starcharge.com,gateway.sccncdn.com,gateway-app.starcharge.com,smartop-sdkapi.jiguang.cn,activity-h5.starcharge.com
 
 
