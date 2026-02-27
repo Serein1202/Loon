@@ -22,7 +22,7 @@ obj = {
         "subscriptions": {
             "0": {
                 "name": "Gold",
-                "typePlatform": "android",
+                "typePlatform": "ios",
                 "typeSubscription": "annual",
                 "typeStatus": "active",
                 "dateExpires": 4667763417,
