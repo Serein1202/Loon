@@ -1,0 +1,21 @@
+#!name=Flightradar24
+#!desc=Flightradar24解锁
+#!author=Serein1202[https://github.com/Serein1202]
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/lightroom.png
+#!homepage=https://github.com/Serein1202/Loon
+#!raw-url=
+#!tag=去广告, Serein1202
+#!system=iOS, iPadOS
+#!date=2026-02-27 17:15:00
+
+[Rule]
+
+[Rewrite]
+
+[Script]
+http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Flightradar24/Flightradar24.js, requires-body=true, timeout=60, tag=Flightradar24Vip
+
+[MITM]
+hostname = mobile.flightradar24.com
+
+
