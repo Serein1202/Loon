@@ -11,6 +11,8 @@ obj.message = "Subscription has been successfully created";
 obj.msg = "Subscription has been successfully created";
 obj.response_code = 100;
 obj.responseCode = 100;
+obj.token = "42807bbd22bbc1dc0b0277830890c80fe5237db8aa8ef7d3693b7580df82f924";
+obj.accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmbGlnaHRyYWRhcjI0LmNvbSIsImV4cCI6MTc3NDc2NTUwMiwiaWF0IjoxNzcyMTczNTAyLCJlbWFpbCI6InhoZDE5OTgxMjAyQGdtYWlsLmNvbSIsInVzZXJJZCI6MTg1NjQ4MDEsImtleVNlc3Npb24iOiI0MjgwN2JiZDIyYmJjMWRjMGIwMjc3ODMwODkwYzgwZmU1MjM3ZGI4YWE4ZWY3ZDM2OTNiNzU4MGRmODJmOTI0Iiwic2wiOiJHIiwiYWwiOiIwIiwicGsiOiIifQ.NMg6sSt35E-xyTdM8OK0jcuD4Q80ka0K8P8Rl5xTpsU";
 obj.userData = {
     dateExpires: 2720154122,
     accountType: "subscriber",
@@ -126,5 +128,7 @@ obj.userData.features = {
     "map.sidemenu.photo.hide": "enabled",
     "history.airport.days": 365
 }
+obj.userData.tokenLogin = "hb3k7lfXIwiNVxinB73J70bo0YeuKZE-SWTjrm1105L2NlD9bMmr5HX20vHGQ2ijBnDAahl9kJtzE5ALS7PEDrIDOc_MVAmu0kKgoLaMU8ZcC4-1TnmaAOOm71gs7N4ferTqeP5WLwLtWlOsrjLis4zcZh0ovPQVXfZCg7UlC5CMJGXCXQJlItmHsX1S2DYgr7QubMaP958f91Ms1dsUdcsTJ76cBLwxr82hvNVNSJP09_iW6GMYPs7jwmGRCQ-E0amENvLTh9xqSNMZfJVpLhfMEpO1W9dOaKZT6Dfp8_kWDLbgnABNILZp7sRU0waFKMN-Z3o5Qac4LwEqUNUvMVojzSoIweCYS7P4jrnwYOTIQVbthcmQw_fia5iQs-9Z2bIhexeOnNbJMnc-mH0W53_lfDckAV5ebPP5vPccHtvlj-fxZDTx_2WKDPSFGN6u";
+obj.userData.accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmbGlnaHRyYWRhcjI0LmNvbSIsImV4cCI6MTc3NDc2NTUwMiwiaWF0IjoxNzcyMTczNTAyLCJlbWFpbCI6InhoZDE5OTgxMjAyQGdtYWlsLmNvbSIsInVzZXJJZCI6MTg1NjQ4MDEsImtleVNlc3Npb24iOiI0MjgwN2JiZDIyYmJjMWRjMGIwMjc3ODMwODkwYzgwZmU1MjM3ZGI4YWE4ZWY3ZDM2OTNiNzU4MGRmODJmOTI0Iiwic2wiOiJHIiwiYWwiOiIwIiwicGsiOiIifQ.NMg6sSt35E-xyTdM8OK0jcuD4Q80ka0K8P8Rl5xTpsU";
 body = JSON.stringify(obj);
 $done({ body });
