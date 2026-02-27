@@ -16,7 +16,7 @@ obj = {
         "dateLastLogin": "2025-01-07 14:24:10",
         "isActive": true,
         "hasConsented": true,
-        "localeCode": "zh-CN",
+        "localeCode": "en_GB",
         "name": "HaoDong",
         "typeSource": "googleplus",
         "subscriptions": {
