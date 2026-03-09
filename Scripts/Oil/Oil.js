@@ -1,8 +1,11 @@
-// Loon 油价脚本
+// Loon 油价 Pro 版
 
-let url = "https://m.qiyoujiage.com/zhejiang/hangzhou.shtml";
+let prov = "浙江";
+let city = "杭州";
 
-$httpClient.get(url, function (error, response, data) {
+let oil_api = `https://api.qqsuu.cn/api/dm-oilprice?prov=${encodeURIComponent(prov)}&city=${encodeURIComponent(city)}`;
+
+$httpClient.get(oil_api, function(error, response, data) {
 
 if (error) {
     console.log("油价获取失败");
@@ -10,50 +13,36 @@ if (error) {
     return;
 }
 
-// 只截取油价区域
-let section = data.match(/<div class="content_youjia">([\s\S]*?)<\/div>/);
+let obj;
 
-if (!section) {
-    console.log("未找到油价区域");
+try {
+    obj = JSON.parse(data);
+} catch(e) {
+    console.log("油价解析失败");
     $done();
     return;
 }
 
-let html = section[1];
-
-let prices = {};
-let reg = /<dt>(.*?)<\/dt>\s*<dd>([\d\.]+)\(元\)<\/dd>/g;
-
-let m;
-
-while ((m = reg.exec(html)) !== null) {
-
-    let name = m[1].replace("杭州","").trim();
-    let price = m[2];
-
-    prices[name] = price;
-
-}
-
-if (Object.keys(prices).length === 0) {
-
-    console.log("解析油价信息失败");
+if (!obj.data) {
+    console.log("接口返回异常");
     $done();
     return;
-
 }
+
+let oil = obj.data;
 
 let text =
-`${prices["92号汽油"] || "--"} 元/L  92号汽油
-${prices["95号汽油"] || "--"} 元/L  95号汽油
-${prices["98号汽油"] || "--"} 元/L  98号汽油
-${prices["0号柴油"] || "--"} 元/L  0号柴油`;
+`92号汽油  ${oil.oil92}
+95号汽油  ${oil.oil95}
+98号汽油  ${oil.oil98}
+0号柴油  ${oil.oil0}`;
+
+let tip = oil.update_time ? `更新时间：${oil.update_time}` : "";
 
 $notification.post(
-"杭州今日油价",
-"",
-text,
-{url:url}
+`${city}今日油价`,
+tip,
+text
 );
 
 $done();
