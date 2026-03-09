@@ -66,10 +66,10 @@ if (trendMatch) {
 }
 
     let text =
-        `92号汽油  ${prices["92"]} 元/L
-95号汽油  ${prices["95"]} 元/L
-98号汽油  ${prices["98"]} 元/L
-0号柴油  ${prices["柴油"]} 元/L
+        `92号汽油：${prices["92"]} 元/L
+95号汽油：${prices["95"]} 元/L
+98号汽油：${prices["98"]} 元/L
+0号柴油：${prices["柴油"]} 元/L
 下次调整：${nextTime}
 预计：${trend}`;
 
@@ -79,7 +79,6 @@ if (trendMatch) {
         text,
         { url: url }
     );
-    // console.log("data", data);
     $done();
 });
 
