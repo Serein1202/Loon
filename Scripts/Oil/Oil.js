@@ -56,7 +56,7 @@ let timeMatch = data.match(timeReg);
 let nextTime = timeMatch ? timeMatch[1] : "未知";
 
 // 解析涨跌预测
-let trendReg = /预计(上调|下调|搁浅)[^<\n]*/;
+let trendReg = /预计(上调|下调|搁浅)[^)]*\)/;
 let trendMatch = data.match(trendReg);
 
 let trend = "未知";
