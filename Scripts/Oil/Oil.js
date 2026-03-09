@@ -56,13 +56,13 @@ let timeMatch = data.match(timeReg);
 let nextTime = timeMatch ? timeMatch[1] : "未知";
 
 // 解析涨跌预测
-let trendReg = /预计(上调|下调|上涨|下降|搁浅)[^<\n]*/;
+let trendReg = /预计(上调|下调|搁浅)[^<\n]*/;
 let trendMatch = data.match(trendReg);
 
 let trend = "未知";
 
 if (trendMatch) {
-    trend = trendMatch[1] + " " + trendMatch[2];
+    trend = trendMatch[0].replace("预计", "");
 }
 
     let text =
