@@ -26,7 +26,7 @@ $httpClient.get(params, function(errormsg,response,data) {
         console.log("Response Headers: " + JSON.stringify(response.headers));
         console.log("Response Body: " + data);
     }
-    if (error || !data) {
+    if (errormsg || !data) {
     console.log("油价获取失败");
     $done();
     return;
