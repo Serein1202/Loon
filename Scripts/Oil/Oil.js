@@ -3,7 +3,7 @@ var region = "zhejiang";
 var city = "hangzhou";
 
 const loondq = $persistentStore.read("地区");
-if (loondq !== undefined) {
+if (loondq) {
   region = loondq;
 }
 
