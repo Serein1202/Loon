@@ -1,6 +1,6 @@
 // Loon 油价脚本
 
-let url = "http://www.qiyoujiage.com/zhejiang/hangzhou.shtml";
+let url = "https://apis.tianapi.com/oilprice/index";
 
 $httpClient.get(url, function(error, response, data) {
 
