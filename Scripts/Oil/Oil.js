@@ -20,7 +20,7 @@ var params = {
 
 $httpClient.get(params, function(error,response,data) {
     if (error) {
-      console.log(`解析油价信息失败, URL=${query_addr}`);
+      console.log(`解析油价信息失败`);
       done({});
     } else {
       const reg_price =
@@ -77,7 +77,7 @@ $httpClient.get(params, function(error,response,data) {
       const friendly_tips = `下次${adjust_date}调整 ${adjust_trend} ${adjust_value}`;
 
       if (prices.length !== 4) {
-        console.log( `解析油价信息失败, 数量=${prices.length},  URL=${query_addr}`);
+        console.log( `解析油价信息失败`);
         done();
       } else {
       const query_addr = `http://m.qiyoujiage.com/${region}.shtml`; 
