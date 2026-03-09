@@ -27,16 +27,22 @@ $httpClient.get(
     }
 
     // 新正则
-    const reg_price = /<dt>(.*?)<\/dt>\s*<dd>([\d\.]+)\(元\)<\/dd>/g;
+
 
     var prices = [];
     var m;
 
+    const reg_price = /(92|95|98|0)号[^0-9]*([\d\.]+)\(元\)/g;
+
     while ((m = reg_price.exec(data)) !== null) {
+
+      let name = m[1] === "0" ? "0号柴油" : `${m[1]}号汽油`;
+
       prices.push({
-        name: m[1].replace("杭州", ""),
+        name: name,
         value: `${m[2]} 元/L`
       });
+
     }
 
     // 调整信息
@@ -55,7 +61,7 @@ $httpClient.get(
 
       adjust_trend =
         adjust_value.indexOf("下调") > -1 ||
-        adjust_value.indexOf("下跌") > -1
+          adjust_value.indexOf("下跌") > -1
           ? "↓"
           : "↑";
     }
@@ -68,14 +74,15 @@ $httpClient.get(
       return;
     }
 
-    var text = "";
+    let text = "";
+
     prices.forEach(p => {
-      text += `${p.name}  ${p.value}\n`;
-    });
+      text += `${p.name}  ${p.value}\n`
+    })
 
     $notification.post(
       "实时油价信息",
-      friendly_tips,
+      "",
       text,
       { url: query_addr }
     );
