@@ -98,62 +98,6 @@ obj.data = [
 				"appId": null,
 				"path": null,
 				"isFullScreen": 1
-			},
-			{
-				"id": "1c4250a9-67ea-459b-8604-2486c09cb551",
-				"refUrl": "10",
-				"refType": 0,
-				"title": "一号多充",
-				"isUser": 1,
-				"picUrl": "https://app-cdn.starcharge.com/000e8352-2692-42d8-b2a4-5a3cce5be635.PNG",
-				"startVersion": "7.6.0",
-				"endVersion": "",
-				"rule": "{\"startVersion\":\"7.6.0\",\"endVersion\":\"\"}",
-				"appId": null,
-				"path": null,
-				"isFullScreen": 0
-			},
-			{
-				"id": "f20a32b9-8c9f-432e-bbc5-f56a44dc2aae",
-				"refUrl": "https://scm-app-h5.starcharge.com/quickCharging/manage",
-				"refType": 1,
-				"title": "即插即充",
-				"isUser": 1,
-				"picUrl": "https://app-cdn.starcharge.com/webDir/3c98fe1e-62a8-c6fa-e0b8-e927d37f1e7b.png",
-				"startVersion": "7.9.5",
-				"endVersion": "",
-				"rule": "{\"startVersion\":\"7.9.5\",\"endVersion\":\"\"}",
-				"appId": null,
-				"path": null,
-				"isFullScreen": 0
-			},
-			{
-				"id": "5154de39-6ef4-4eae-a34f-d37384700cab",
-				"refUrl": "https://app-taro.starcharge.com/pages/introductionPage/drawTheGun/index",
-				"refType": 1,
-				"title": "无法拔枪",
-				"isUser": 1,
-				"picUrl": "https://app-cdn.starcharge.com/webDir/66c39ce2-ef80-02f2-3cd2-247610eafde8.png",
-				"startVersion": "7.40",
-				"endVersion": "",
-				"rule": "{\"startVersion\":\"7.40\",\"endVersion\":\"\"}",
-				"appId": null,
-				"path": null,
-				"isFullScreen": 1
-			},
-			{
-				"id": "367ce82e-ddf2-4152-b943-7d8def5dda94",
-				"refUrl": "4",
-				"refType": 0,
-				"title": "收藏电站",
-				"isUser": 1,
-				"picUrl": "https://app-cdn.starcharge.com/webDir/8ee3999e-cd6b-8a30-ef11-32000a2626a0.png",
-				"startVersion": "7.17.0",
-				"endVersion": "",
-				"rule": "{\"startVersion\":\"7.17.0\",\"endVersion\":\"\"}",
-				"appId": null,
-				"path": null,
-				"isFullScreen": 0
 			}
 		]
 	}];
