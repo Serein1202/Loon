@@ -1,0 +1,140 @@
+# Author:https://github.com/Repcz
+# TG:https://t.me/QVQ_Channel
+#
+# 官方文档：https://wiki.metacubex.one/
+#
+# 以 '#' 或 '//' 开头的配置文件行为注释行
+#
+# Mihomo Version ≥ 1.8.10
+#
+# 最后更新时间: 2025-12-14 10:15
+#
+# ================
+
+p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://1.1.1.1/generate_204, interval: 1800, timeout: 5000}}
+proxy-providers:
+  Subscribe: # 在此将 "http://your-service-provider" 替换为你的机场订阅，推荐使用 base64 或者 node list
+    url: http://127.0.0.1:38324/download/ikuuu?target=ClashMeta
+    <<: *p
+    override: # 修改节点前后缀时，需移除前方的 "#" 符号
+      additional-prefix: "ikuuu - " #节点前缀
+      #additional-suffix: "节点后缀"
+  #Subscribe2: {url: http://your-service-provider, <<: *p}
+  #Subscribe3: {url: http://your-service-provider, <<: *p}
+  #Subscribe4: {url: http://your-service-provider, <<: *p}
+
+mixed-port: 7893
+tcp-concurrent: true
+allow-lan: true
+ipv6: false
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+find-process-mode: strict
+
+geodata-mode: true
+geox-url:
+  geoip: "https://git.repcz.link/raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip.dat"
+  geosite: "https://git.repcz.link/github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://git.repcz.link/raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
+  asn: "https://git.repcz.link/raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb"
+
+profile: { store-selected: true, store-fake-ip: false }
+sniffer: { enable: true, sniff: { HTTP: { ports: [80], override-destination: true }, TLS: { ports: [443, 8443] }, QUIC: { ports: [443, 8443] } } }
+
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack: [any:53]
+        
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: :1053
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter: ['+.lan', '*', '+.local', '+.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '+.10099.com.cn', '+.msftconnecttest.com', '+.msftncsi.com', 'lancache.steamcontent.com']
+  nameserver: [223.5.5.5, 119.29.29.29]
+
+# 锚点参数
+pg: &pg {type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 英国节点, 阿根廷节点, 俄罗斯节点, 土耳其节点, 韩国节点, 印度节点, 德国节点, 加拿大节点, 澳大利亚节点, 法国节点, 乌克兰节点, DIRECT]}
+url-test: &url-test {type: url-test, url: http://1.1.1.1/generate_204, interval: 300, tolerance: 0, include-all: true}
+select: &select {type: select, include-all: true}
+fallback: &fallback {type: fallback, url: http://1.1.1.1/generate_204, interval: 300, include-all: true}
+load-balance: &load-balance {type: load-balance, strategy: consistent-hashing, url: http://1.1.1.1/generate_204, interval: 300, include-all: true}
+c: &c {type: http, behavior: classical, format: text, interval: 86400}
+
+proxy-groups:
+
+  - {name: 手动切换, type: select, include-all: true, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 英国节点, 阿根廷节点, 俄罗斯节点, 土耳其节点, 韩国节点, 印度节点, 德国节点, 加拿大节点, 澳大利亚节点, 法国节点, 乌克兰节点, DIRECT], icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/applesafari.png}
+  - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png}
+  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png}
+  - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png}
+  - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png}
+  - {name: 谷歌服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png}
+  - {name: 微信消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeChat.png}
+  - {name: 电报消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png}
+  - {name: 推特消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png}
+  - {name: Github, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png}
+  - {name: AI, <<: *pg, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
+  - {name: 游戏平台, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png}
+  - {name: Spotify, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png}
+  - {name: 兜底分流, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png}
+  - {name: 香港节点, <<: *url-test, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png}
+  - {name: 美国节点, <<: *url-test, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png}
+  - {name: 狮城节点, <<: *url-test, filter: "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png}
+  - {name: 日本节点, <<: *url-test, filter: "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png}
+  - {name: 台湾节点, <<: *url-test, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
+  - {name: 英国节点, <<: *url-test, filter: "(?i)🇬🇧|英国|伦敦|(\b(UK|United Kingdom)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png}
+  - {name: 阿根廷节点, <<: *url-test, filter: "(?i)🇦🇷|阿根廷|布宜诺斯艾利斯|(\b(AR|Argentina)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Argentina.png}
+  - {name: 俄罗斯节点, <<: *url-test, filter: "(?i)🇷🇺|俄罗斯|莫斯科|(\b(RU|Russia)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png}
+  - {name: 土耳其节点, <<: *url-test, filter: "(?i)🇹🇷|土耳其|伊斯坦布尔|(\b(TR|Turkey)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png}
+  - {name: 韩国节点, <<: *url-test, filter: "(?i)🇰🇷|韩国|首尔|(\b(KR|Korea)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png}
+  - {name: 印度节点, <<: *url-test, filter: "(?i)🇮🇳|印度|新德里|(\b(IN|India)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png}
+  - {name: 德国节点, <<: *url-test, filter: "(?i)🇩🇪|德国|柏林|(\b(DE|Germany)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png}
+  - {name: 加拿大节点, <<: *url-test, filter: "(?i)🇨🇦|加拿大|多伦多|(\b(CA|Canada)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Canada.png}
+  - {name: 澳大利亚节点, <<: *url-test, filter: "(?i)🇦🇺|澳大利亚|悉尼|(\b(AU|Australia)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Australia.png}
+  - {name: 法国节点, <<: *url-test, filter: "(?i)🇫🇷|法国|巴黎|(\b(FR|France)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/France.png}
+  - {name: 乌克兰节点, <<: *url-test, filter: "(?i)🇺🇦|乌克兰|基辅|(\b(UA|Ukraine)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Ukraine.png}
+
+
+rule-providers:
+  
+  Direct: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Direct.list}
+  Lan: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Lan.list}
+  Reject: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Reject.list}
+  AppleCN: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/AppleCN.list}
+  AppleProxy: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/AppleServers.list}
+  Microsoft: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Microsoft.list}
+  Github: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Github.list}
+  YouTube: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/YouTube.list}
+  Google: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Google.list}
+  WeChat: {<<: *c, url: https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/WeChat.list}
+  Telegram: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Telegram.list}
+  X: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Twitter.list}
+  Steam: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Steam.list}
+  Epic: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Epic.list}
+  AI: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/AI.list}
+  Spotify: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Spotify.list}
+  Proxy: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Proxy.list}
+
+rules:
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Reject,REJECT
+  - RULE-SET,AI,AI
+  - RULE-SET,Github,Github
+  - RULE-SET,Microsoft,DIRECT
+  - RULE-SET,YouTube,谷歌服务
+  - RULE-SET,Google,谷歌服务
+  - RULE-SET,WeChat,微信消息
+  - RULE-SET,X,推特消息
+  - RULE-SET,Telegram,电报消息
+  - RULE-SET,Steam,游戏平台
+  - RULE-SET,Epic,游戏平台
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,Proxy,国外网站
+  - RULE-SET,AppleCN,DIRECT
+  - RULE-SET,AppleProxy,手动切换
+  - RULE-SET,Lan,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,兜底分流
