@@ -18,7 +18,7 @@
 ^https?:\/\/ejoyshopbucket\.oss-cn-beijing\.aliyuncs\.com\/group1\/pic reject-200
 ^https?:\/\/d\.sinopecsales\.com\/third\/netadmin\/static\/imgs reject-200
 ^https?:\/\/a\.sinopecsales\.com\/app\/cms reject-200
-^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 mock-response-body data-type=html data-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.html status-code=200
+^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 mock-response-body data-type=html data-path="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.html" status-code=200
 
 [Script]
 
