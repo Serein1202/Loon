@@ -1,9 +1,9 @@
 #!name=Sinopecsales去广告
 #!desc=针对Sinopecsales广告进行拦截，要重新安装清除缓存拦截广告才会生效！
 #!author=Serein1202[https://github.com/Serein1202]
-#!icon=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.png
+#!icon=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopecsales/Sinopecsales.png
 #!homepage=https://github.com/Serein1202/Loon
-#!raw-url=https://github.com/Serein1202/Loon/blob/main/Scripts/StarCharge/StarCharge.lpx
+#!raw-url=
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
 #!date=2026-03-30 20:30:00
@@ -21,8 +21,8 @@
 
 
 [Script]
-
+http-response ^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5\/[A-Za-z0-9]+$ script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopecsales/Sinopecsales.html, requires-body=true, timeout=60, tag=车生活
 [MITM]
-hostname = shop.ejoy365.com,a.sinopecsales.com,d.sinopecsales.com,pro-ocr.oss-cn-beijing.aliyuncs.com,ejoyshopbucket.oss-cn-beijing.aliyuncs.com
+hostname = shop.ejoy365.com,a.sinopecsales.com,d.sinopecsales.com,pro-ocr.oss-cn-beijing.aliyuncs.com,ejoyshopbucket.oss-cn-beijing.aliyuncs.com,cx.sinopecsales.com
 
 
