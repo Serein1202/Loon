@@ -67,144 +67,10 @@
         height: auto;
         border: none;
       }
-      /*布局样式*/
-      .wrapper {
-        margin: auto;
-        display: flex;
-        width: 100%;
-        max-width: 750px;
-        background-color: #f4f4f4;
-      }
-
-      .mt-20 {
-        margin-top: 0.2rem;
-      }
-      .mb-20 {
-        margin-bottom: 0.2rem;
-      }
-      .main {
-        width: 100%;
-      }
-      .title {
-        width: 100%;
-        max-width: 7.5rem;
-        height: 0.89rem;
-        position: fixed;
-        top: 0;
-        z-index: 2;
-        opacity: 1;
-        background-color: #da281c;
-        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-      }
-
-      .title > p {
-        font-family:
-          Source Han Sans SC,
-          Helvetica Neue,
-          Helvetica,
-          PingFang SC,
-          Hiragino Sans GB,
-          Microsoft YaHei,
-          Arial,
-          sans-serif;
-        margin-top: 0.26rem;
-        font-weight: 500;
-        font-size: 0.34rem;
-        color: #ffffff;
-        text-align: center;
-      }
-
-      .yuan-j20 {
-        border-radius: 20px;
-      }
-
       .xc-01 {
         /*margin-top: .89rem;*/
-        height: 3.2rem;
+        height: 100%;
         position: relative;
-      }
-      .xc-01-font > span {
-        font-size: 0.32rem;
-        color: #ffffff;
-        font-weight: 500;
-        position: absolute;
-        bottom: 0.1rem;
-        left: 0.27rem;
-      }
-      .xc-02 {
-        height: 3.2rem;
-        margin: 0.2rem 0.24rem;
-        position: relative;
-      }
-
-      .xc-03 {
-        height: 2.6rem;
-        margin-left: 0.24rem;
-        margin-right: 0.24rem;
-        background-color: #ffffff;
-        padding: 0.2rem;
-      }
-      .xc-05 {
-        margin-left: 0.24rem;
-        margin-right: 0.24rem;
-        background-color: #ffffff;
-        padding: 0.2rem;
-        display: flex;
-        justify-content: space-between;
-      }
-      div.xc-03 > div:first-child {
-        height: 2.6rem;
-        width: 3.22rem;
-        float: left;
-      }
-      div.xc-03 > div:last-child {
-        height: 2.6rem;
-        width: 3.22rem;
-        float: left;
-        padding-left: 0.14rem;
-      }
-
-      .xc-04 {
-        margin-left: 0.24rem;
-        margin-right: 0.24rem;
-        height: 1.4rem;
-      }
-      .xc-card {
-        overflow: hidden;
-      }
-      .xc-card > div > span {
-        font-size: 0.34rem;
-      }
-      .xc-card > div {
-        height: 1.4rem;
-        width: 3.41rem;
-        float: left;
-        margin-top: 0.2rem;
-      }
-      /*
-            div.xc-card 下基数div子元素
-        */
-      div.xc-card > div:nth-child(odd) {
-        margin-left: 0.24rem;
-      }
-      /*
-            div.xc-card 下偶数div子元素
-        */
-      div.xc-card > div:nth-child(even) {
-        margin-left: 0.2rem;
-      }
-      /*弹窗主题样式*/
-      .swal-modal {
-        width: 3.5rem !important;
-      }
-      .swal-text:first-child {
-      }
-      .swal-button {
-      }
-      .swal-text {
-      }
-      .swal-footer {
-        text-align: center;
       }
     </style>
   </head>
@@ -214,10 +80,9 @@
         <div class="title" style="display: none">
           <p>车生活</p>
         </div>
-        <div class="xc-01" @click.prevent="btnClick('yinHangYouHui')">
+        <div class="xc-01">
           <img
             src="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/404.png"
-            alt=""
           />
         </div>
     </div>
