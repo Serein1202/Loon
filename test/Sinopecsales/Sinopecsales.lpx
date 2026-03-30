@@ -1,0 +1,28 @@
+#!name=Sinopecsales去广告
+#!desc=针对Sinopecsales广告进行拦截，要重新安装清除缓存拦截广告才会生效！
+#!author=Serein1202[https://github.com/Serein1202]
+#!icon=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.png
+#!homepage=https://github.com/Serein1202/Loon
+#!raw-url=https://github.com/Serein1202/Loon/blob/main/Scripts/StarCharge/StarCharge.lpx
+#!tag=去广告, Serein1202
+#!system=iOS, iPadOS
+#!date=2025-12-24 20:30:00
+
+[Rule]
+
+[Rewrite]
+# 去广告
+^https?:\/\/a\.sinopecsales\.com\/app\/wff reject
+^https?:\/\/shop\.ejoy365\.com\/ejoyshop-product\/front\/product\/integral\/selectList reject
+^https?:\/\/pro-ocr\.oss-cn-beijing\.aliyuncs\.com\/+swt reject
+^https?:\/\/ejoyshopbucket\.oss-cn-beijing\.aliyuncs\.com\/group1\/pic reject
+^https?:\/\/d\.sinopecsales\.com\/third\/netadmin\/static\/imgs reject
+^https?:\/\/a\.sinopecsales\.com\/app\/cms reject
+
+
+[Script]
+
+[MITM]
+hostname = shop.ejoy365.com,a.sinopecsales.com,d.sinopecsales.com,pro-ocr.oss-cn-beijing.aliyuncs.com,ejoyshopbucket.oss-cn-beijing.aliyuncs.com
+
+
