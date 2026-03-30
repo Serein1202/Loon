@@ -18,10 +18,10 @@
 ^https?:\/\/ejoyshopbucket\.oss-cn-beijing\.aliyuncs\.com\/group1\/pic reject-200
 ^https?:\/\/d\.sinopecsales\.com\/third\/netadmin\/static\/imgs reject-200
 ^https?:\/\/a\.sinopecsales\.com\/app\/cms reject-200
-^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 reject-img
+# ^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 reject-img
 
 [Script]
-
+http-response ^https:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.js, requires-body=false, tag=车生活
 [MITM]
 hostname = shop.ejoy365.com,a.sinopecsales.com,d.sinopecsales.com,pro-ocr.oss-cn-beijing.aliyuncs.com,ejoyshopbucket.oss-cn-beijing.aliyuncs.com,cx.sinopecsales.com
 
