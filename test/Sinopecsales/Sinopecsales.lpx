@@ -21,7 +21,7 @@
 
 
 [Script]
-http-response ^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5\/[A-Za-z0-9]+$ script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopecsales/Sinopecsales.html, requires-body=true, timeout=60, tag=车生活
+http-response ^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopecsales/Sinopecsales.html, requires-body=false, timeout=60, tag=车生活
 [MITM]
 hostname = shop.ejoy365.com,a.sinopecsales.com,d.sinopecsales.com,pro-ocr.oss-cn-beijing.aliyuncs.com,ejoyshopbucket.oss-cn-beijing.aliyuncs.com,cx.sinopecsales.com
 
