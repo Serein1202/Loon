@@ -1,90 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!--调试工具-->
-    <!--<script src="https://s.url.cn/qqun/qun/qqweb/m/qun/confession/js/vconsole.min.js "></script>-->
-    <meta charset="UTF-8" />
-    <title>车生活</title>
-    <!--视窗设置-->
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
-    />
-    <!--通用JS 其中尺寸按照设计稿尺寸-->
-    <script>
-      (function (doc, win) {
-        var docEl = doc.documentElement,
-          resizeEvt =
-            "orientationchange" in window ? "orientationchange" : "resize",
-          recalc = function () {
-            var clientWidth = docEl.clientWidth;
-            if (!clientWidth) return;
-            if (clientWidth > 750) {
-              docEl.style.fontSize = "100px";
-            } else {
-              docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
-            }
-          };
-        if (!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-        doc.addEventListener("DOMContentLoaded", recalc, false);
-      })(document, window);
-    </script>
-    <script>
-      const androidReg = /(Android)/i;
-      const iosReg = /(iPhone|iPad|iPod|iOS)/i;
-      if (androidReg.test(navigator.userAgent)) {
-        var sinopecapp_loadNative = function (method, param) {
-          return sinopecapp.sinopecapp_loadNative(method, param);
+
+<head>
+  <!--调试工具-->
+  <!--<script src="https://s.url.cn/qqun/qun/qqweb/m/qun/confession/js/vconsole.min.js "></script>-->
+  <meta charset="UTF-8" />
+  <title>车生活</title>
+  <!--视窗设置-->
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <!--通用JS 其中尺寸按照设计稿尺寸-->
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt =
+          "orientationchange" in window ? "orientationchange" : "resize",
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          if (clientWidth > 750) {
+            docEl.style.fontSize = "100px";
+          } else {
+            docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
+          }
         };
-      } else if (iosReg.test(navigator.userAgent)) {
-        var sinopecapp_loadNative = function (method, param) {
-          return window.webkit.messageHandlers.sinopecapp_loadNative.postMessage(
-            { method, param },
-          );
-        };
-      }
-    </script>
-    <style>
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        background-color: #f4f4f4;
-        font-family:
-          Helvetica Neue,
-          Helvetica,
-          PingFang SC,
-          Hiragino Sans GB,
-          Microsoft YaHei,
-          Arial,
-          sans-serif;
-      }
-      img,
-      svg {
-        vertical-align: middle;
-        max-width: 100%;
-        height: auto;
-        border: none;
-      }
-      .xc-01 {
-        /*margin-top: .89rem;*/
-        height: 100%;
-        position: relative;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper" id="app">
-      <div class="main">
-        <div class="title" style="display: none">
-          <p>车生活</p>
-        </div>
-        <div class="xc-01">
-          <img
-            src="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/404.png"
-          />
-        </div>
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener("DOMContentLoaded", recalc, false);
+    })(document, window);
+  </script>
+  <script>
+    const androidReg = /(Android)/i;
+    const iosReg = /(iPhone|iPad|iPod|iOS)/i;
+    if (androidReg.test(navigator.userAgent)) {
+      var sinopecapp_loadNative = function (method, param) {
+        return sinopecapp.sinopecapp_loadNative(method, param);
+      };
+    } else if (iosReg.test(navigator.userAgent)) {
+      var sinopecapp_loadNative = function (method, param) {
+        return window.webkit.messageHandlers.sinopecapp_loadNative.postMessage(
+          { method, param },
+        );
+      };
+    }
+  </script>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      /* ✅ 必须加 */
+      background-color: #f4f4f4;
+      font-family:
+        Helvetica Neue,
+        Helvetica,
+        PingFang SC,
+        Hiragino Sans GB,
+        Microsoft YaHei,
+        Arial,
+        sans-serif;
+    }
+
+    .xc-01 {
+      height: 100%;
+    }
+
+    .xc-01 img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper" id="app">
+    <div class="main">
+      <div class="title" style="display: none">
+        <p>车生活</p>
+      </div>
+      <div class="xc-01">
+        <img src="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/404.png" />
+      </div>
     </div>
-  </body>
+</body>
+
 </html>
