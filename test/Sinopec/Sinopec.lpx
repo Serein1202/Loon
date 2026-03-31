@@ -16,6 +16,8 @@
 ^https?:\/\/a\.sinopecsales\.com\/app\/wff reject-200
 # 搜索框轮播
 ^https?:\/\/a\.sinopecsales\.com\/app\/search reject-200
+# 右下角会员日广告
+^https?:\/\/a\.sinopecsales\.com\/app\/layout\/image\/xfq_20260321\.png reject
 ^https?:\/\/shop\.ejoy365\.com\/ejoyshop-product\/front\/product\/integral\/selectList reject-200
 ^https?:\/\/pro-ocr\.oss-cn-beijing\.aliyuncs\.com\/\/swt\/(74|177|103) reject-img
 ^https?:\/\/ejoyshopbucket\.oss-cn-beijing\.aliyuncs\.com\/group1\/pic reject-200
@@ -24,7 +26,8 @@
 ^https?:\/\/a\.sinopecsales\.com\/app\/cms reject-200
 # 车生活重定向
 ^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 mock-response-body data-type=html data-path="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.html" status-code=200
-
+# 首页布局重定向
+^https?:\/\/a\.sinopecsales\.com\/app\/layout\/AppLayout_6\.1\.0_20260326\.json mock-response-body data-type=json data-path="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.json" status-code=200
 [Script]
 
 [MITM]
