@@ -79,7 +79,7 @@ var attach = {
         "杭州今日油价",
         "",
         text,
-        attach
+        {"openUrl":"http://m.qiyoujiage.com/zhejiang/hangzhou.shtml"}
     );
     $done();
 });
