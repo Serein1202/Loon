@@ -27,9 +27,9 @@
 # 车生活重定向
 ^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 mock-response-body data-type=html data-path="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.html" status-code=200
 # 首页布局重定向
-^https?:\/\/a\.sinopecsales\.com\/app\/layout\/AppLayout_6\.1\.0_20260326\.json mock-response-body data-type=json data-path="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.json" status-code=200
+# ^https?:\/\/a\.sinopecsales\.com\/app\/layout\/AppLayout_6\.1\.0_\d{8}\.json mock-response-body data-type=json data-path="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.json" status-code=200
 [Script]
-
+http-response ^https?:\/\/a\.sinopecsales\.com\/app\/layout\/AppLayout_6\.1\.0_\d{8}\.json script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.json, requires-body=true, timeout=60, tag=Layout
 [MITM]
 hostname = shop.ejoy365.com,a.sinopecsales.com,d.sinopecsales.com,pro-ocr.oss-cn-beijing.aliyuncs.com,ejoyshopbucket.oss-cn-beijing.aliyuncs.com,cx.sinopecsales.com
 
