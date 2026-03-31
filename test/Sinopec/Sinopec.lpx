@@ -6,18 +6,23 @@
 #!raw-url=
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
-#!date=2026-03-30 20:30:00
+#!date=2026-03-31 13:30:00
 
 [Rule]
 
 [Rewrite]
 # 去广告
+# 主页商品json
 ^https?:\/\/a\.sinopecsales\.com\/app\/wff reject-200
+# 搜索框轮播
+^https?:\/\/a\.sinopecsales\.com\/app\/search reject-200
 ^https?:\/\/shop\.ejoy365\.com\/ejoyshop-product\/front\/product\/integral\/selectList reject-200
-^https?:\/\/pro-ocr\.oss-cn-beijing\.aliyuncs\.com\/+swt reject-200
+^https?:\/\/pro-ocr\.oss-cn-beijing\.aliyuncs\.com\/\/swt\/(74|177|103) reject-200
 ^https?:\/\/ejoyshopbucket\.oss-cn-beijing\.aliyuncs\.com\/group1\/pic reject-200
 ^https?:\/\/d\.sinopecsales\.com\/third\/netadmin\/static\/imgs reject-200
+# 主页轮播banner
 ^https?:\/\/a\.sinopecsales\.com\/app\/cms reject-200
+# 车生活重定向
 ^https?:\/\/cx\.sinopecsales\.com\/netadmin\/open\/h5 mock-response-body data-type=html data-path="https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.html" status-code=200
 
 [Script]
