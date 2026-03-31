@@ -72,12 +72,14 @@ $httpClient.get(params, function (error, response, data) {
 0号柴油：${prices["柴油"]} 元/L
 下次调整：${nextTime}
 预计：${trend}`;
-
+var attach = {
+    "openUrl":"https://cx.sinopecsales.com/yjkqiantai/core/initCpbProvince"
+}
     $notification.post(
         "杭州今日油价",
         "",
         text,
-        { openUrl: "https://cx.sinopecsales.com/yjkqiantai/core/initCpbProvince" }
+        attach
     );
     $done();
 });
