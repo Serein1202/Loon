@@ -49,21 +49,21 @@ $httpClient.get(params, function (error, response, data) {
         return;
     }
 
-// 解析下次油价调整时间
-let timeReg = /下次油价(\d+月\d+日\d+时)调整/;
-let timeMatch = data.match(timeReg);
+    // 解析下次油价调整时间
+    let timeReg = /下次油价(\d+月\d+日\d+时)调整/;
+    let timeMatch = data.match(timeReg);
 
-let nextTime = timeMatch ? timeMatch[1] : "未知";
+    let nextTime = timeMatch ? timeMatch[1] : "未知";
 
-// 解析涨跌预测
-let trendReg = /预计(上调|下调|搁浅)[^)]*\)/;
-let trendMatch = data.match(trendReg);
+    // 解析涨跌预测
+    let trendReg = /预计(上调|下调|搁浅)[^)]*\)/;
+    let trendMatch = data.match(trendReg);
 
-let trend = "未知";
+    let trend = "未知";
 
-if (trendMatch) {
-    trend = trendMatch[0].replace("预计", "");
-}
+    if (trendMatch) {
+        trend = trendMatch[0].replace("预计", "");
+    }
 
     let text =
         `92号汽油：${prices["92"]} 元/L
@@ -77,7 +77,7 @@ if (trendMatch) {
         "杭州今日油价",
         "",
         text,
-        { url: url }
+        { openUrl: "https://cx.sinopecsales.com/yjkqiantai/core/initCpbProvince" }
     );
     $done();
 });
