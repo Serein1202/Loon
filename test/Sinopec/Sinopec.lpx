@@ -19,7 +19,7 @@
 ^https?:\/\/shop\.ejoy365\.com\/ejoyshop-product\/front\/product\/integral\/selectList reject-200
 ^https?:\/\/pro-ocr\.oss-cn-beijing\.aliyuncs\.com\/\/swt\/(74|177|103) reject-img
 ^https?:\/\/ejoyshopbucket\.oss-cn-beijing\.aliyuncs\.com\/group1\/pic reject-200
-^https?:\/\/d\.sinopecsales\.com\/third\/netadmin\/static\/imgs reject-200
+^https?:\/\/d\.sinopecsales\.com\/third\/netadmin\/static\/imgs reject-img
 # 主页轮播banner
 ^https?:\/\/a\.sinopecsales\.com\/app\/cms reject-200
 # 车生活重定向
