@@ -1268,18 +1268,6 @@
       "showType": "newWindow",
       "login": true
     },
-    "csh": {
-      "name": "csh",
-      "caption": "������",
-      "img_new": "csh4.png",
-      "img_tab_new": "csh_tab6.png",
-      "img_tab_on_new": "csh_tab_on5.png",
-      "funType": "h5",
-      "url": "https://cx.sinopecsales.com/netadmin/open/h5/SECyt5x3j3Nb5P3iYTH009e1xgo",
-      "showType": "newWindow",
-      "login": false,
-      "canSearch": true
-    },
     "daohang": {
       "name": "daohang",
       "caption": "����",
