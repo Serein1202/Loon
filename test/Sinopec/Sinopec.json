@@ -165,11 +165,6 @@
         "color": "0080E2"
       }
     },
-    "homeBall": {
-      "on": true,
-      "image": "xfq_20260321.png",
-      "url": "https://a.ejoy365.com/ZJ7nae"
-    },
     "showHyqyArea": true,
     "homeReplaceList": {
       "androidList": {
