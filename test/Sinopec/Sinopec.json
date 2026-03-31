@@ -843,15 +843,6 @@
         "image": "sjb20221208-a-12.png"
       }
     },
-    "news": {
-      "name": "news",
-      "funType": "native",
-      "showType": "currentLocation",
-      "layout": {
-        "width": 4,
-        "height": 0.608
-      }
-    },
     "center": {
       "name": "center",
       "funType": "native",
@@ -860,57 +851,6 @@
         "width": 4,
         "height": 1.0256
       }
-    },
-    "market": {
-      "name": "market",
-      "funType": "h5",
-      "showImage": true,
-      "img": "hd-20260321-18.png",
-      "url": "https://a.ejoy365.com/ZNV7bu",
-      "showType": "currentLocation",
-      "layout": {
-        "width": 4,
-        "height": 0.9387
-      }
-    },
-    "noticeArea": {
-      "name": "noticeArea",
-      "funType": "native",
-      "showType": "currentLocation",
-      "layout": {
-        "width": 4,
-        "height": 0.4558
-      }
-    },
-    "sales": {
-      "name": "sales",
-      "funType": "native",
-      "showType": "currentLocation",
-      "layout": {
-        "width": 4,
-        "height": 1.3227
-      }
-    },
-    "zzzz": {
-      "name": "zzzz",
-      "funType": "h5",
-      "showImage": true,
-      "img": "zzzz1.png",
-      "url": "https://a.sinopecsales.com/app/page/zzzz/10/index.html",
-      "showType": "currentLocation",
-      "layout": {
-        "width": 4,
-        "height": 0.4267
-      }
-    },
-    "zzzz_new": {
-      "name": "zzzz_new",
-      "caption": "֤����Ϣ",
-      "img": "zzzz2.png",
-      "img_new": "zzzz4.png",
-      "funType": "h5",
-      "url": "https://a.sinopecsales.com/app/page/zzzz/11/index.html",
-      "showType": "newWindow"
     },
     "yjsc-rxsp": {
       "name": "yjsc-rxsp",
@@ -921,26 +861,6 @@
         "width": 4,
         "height": 8.144
       }
-    },
-    "yjhg": {
-      "name": "yjhg",
-      "funType": "h5",
-      "url": "https://newmall-site.ejoy365hk.com/wap/#/pages/activity/index?id=5fa59adb129650000630087c",
-      "showType": "currentLocation",
-      "layout": {
-        "width": 4,
-        "height": 4.16
-      },
-      "appendRegionParam": "true"
-    },
-    "yjhg-bdfw": {
-      "name": "yjhg-bdfw",
-      "caption": "���ط���",
-      "img_new": "bdfw4.png",
-      "funType": "h5",
-      "url": "https://newmall-site.ejoy365hk.com/wap/#/pages/activity/index?id=5fa59adb129650000630087c",
-      "showType": "newWindow",
-      "appendRegionParam": "true"
     },
     "yjhg-dzq": {
       "name": "yjhg-dzq",
