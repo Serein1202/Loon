@@ -1,0 +1,328 @@
+# Serein.自用配置
+# Update:2026.6
+[General]
+ip-mode = v4-only
+ipv6-vif = off
+dns-server = system,119.29.29.29,114.114.114.114,223.5.5.5,1.1.1.1,8.8.8.8
+sni-sniffing = true
+disable-stun = true
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+allow-wifi-access = false
+interface-mode = auto
+test-timeout = 5
+disconnect-on-policy-change = false
+internet-test-url = http://wifi.vivo.com.cn/generate_204
+proxy-test-url = http://detectportal.firefox.com/success.txt
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url = https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+mitm-on-wifi-access = true
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,passenger.t3go.cn,passenger.t3go.cn
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+real-ip = msftconnecttest.com,msftncsi.com,*.msftconnecttest.com,*.msftncsi.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,*.battlenet.com.cn,*.battlenet.com,*.blzstatic.cn,*.battle.net
+
+
+[Host]
+#可以使用以下四种模式：
+# 1 指定域名使用对应的IP地址
+# 2 将域名指向另一个域名
+# 3 指定域名请求DNS时使用特定的DNS服务器，格式为：google.com = server:8.8.8.8 或者 *.baidu.com = server:https://example.com/dns-query
+#  指定具体的SSID环境下使用特定的DNS服务器
+iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
+
+[Proxy]
+
+[Remote Proxy]
+tootooyun = https://sub.store/download/tootooyun?target=Loon,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=true,enabled=true,flexible-sni=false
+GameCloud = https://sub.store/download/GameCloud?target=Loon,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=true,enabled=true,flexible-sni=false
+MuGua = https://sub.store/download/MuGuaCloud?target=Loon,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true
+ikuuu = https://sub.store/download/ikuuu?target=Loon,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=true,skip-cert-verify=true,enabled=false,flexible-sni=true
+[Remote Filter]
+# 筛选订阅节点，筛选后的结果可加入到策略组中，目前支持三种筛选方式
+# NodeSelect: 使用在UI上选择的节点。
+# NameKeyword: 根据提供的关键词对订阅中所有节点的名称进行筛选，使用筛选后的节点。
+# NameRegex: 根据提供的正则表达式对订阅中所有节点的名称进行筛选，使用筛选后的节点。
+中国大陆 = NameRegex, FilterKey = "(?i)(浙江|上海|国内|中国|电信|联通|移动|🇨🇳|CN|cn)"
+香港 = NameRegex, FilterKey = "(?i)(HK|香港|港|🇭🇰️|Hongkong|Hong kong)"
+台湾 = NameRegex, FilterKey = "(?i)(台|台湾|TW|taiwan)"
+美国 = NameRegex, FilterKey = "(?i)(美|美国|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|US|us)"
+俄罗斯 = NameRegex, FilterKey = "(?i)(俄|俄罗斯|熊|RU|ru)"
+日本 = NameRegex, FilterKey = "(?i)(日|日本|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP)"
+英国 = NameRegex, FilterKey = "(?i)(英|英国|英格兰|UK|uk)"
+德国 = NameRegex, FilterKey = "(?i)(德|德国|法西斯|DE|de)"
+新加坡 = NameRegex, FilterKey = "(?i)(狮城|新|新加坡|🇸🇬|SG)"
+韩国 = NameRegex, FilterKey = "(?i)(韩国|韩|棒子|kr|KR)"
+
+[Proxy Group]
+## 策略组
+## 将分流规则传递过来的网络请求进行分发
+# 所有节点
+# 自动选择最优节点
+Auto-test = url-test,香港,台湾,日本,url = http://www.gstatic.com/generate_204,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Auto.png
+# 服务器按地区分组策略
+# > 中国大陆
+CN = select,中国大陆,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/CN.png
+# > 香港
+HK = select,香港,url = http://cp.cloudflare.com/generate_204,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/HK.png
+# > 台湾
+TW = select,台湾,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/taiwan(2).png
+# > 美国
+US = select,美国,url = http://cp.cloudflare.com/generate_204,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/UM.png
+# > 俄罗斯
+RU = select,俄罗斯,url = http://cp.cloudflare.com/generate_204,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/RU.png
+# > 日本
+JP = select,日本,url = http://cp.cloudflare.com/generate_204,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/JP.png
+# > 英国
+UK = select,英国,url = http://cp.cloudflare.com/generate_204,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/GB.png
+# > 德国
+DE = select,德国,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Germany.png
+# > 新加坡
+SG = select,新加坡,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/singapore(2).png
+# > 韩国
+KR = select,韩国,url = http://cp.cloudflare.com/generate_204,img-url = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/120px/KR.png
+# 国外媒体细分策略
+# > Binance策略
+Binance = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = bitcoinsign.circle.fill
+# > Okx策略
+Okx = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OKX.png
+# > Wechat策略
+Wechat = select,Auto-test,CN,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wechat.png
+# > YouTube策略
+YouTube = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/youtube.png
+# > Spotify策略
+Spotify = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png
+# > TikTok策略
+TikTok = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TikTok.png
+# 国内媒体细分策略
+# > BiliBili策略
+BiliBili = select,Auto-test,CN,US,HK,JP,TW,SG,KR,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBiliTV.png
+# 软件&服务策略
+# > AI策略
+AI = select,Auto-test,CN,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChatGPT.png
+# > GitHub策略
+GitHub = select,Auto-test,CN,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/GitHub.png
+# > Steam策略
+Steam = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/steam.png
+# > Majsoul策略
+Majsoul = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/game.png
+# > Telegram策略
+Telegram = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png
+# > Twitter策略
+X = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/X.png
+# > Speedtest策略
+Speedtest = select,Auto-test,CN,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OoklaSpeedtest.png
+# > PayPal策略
+PayPal = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PayPal.png
+# > TestFlight策略
+TestFlight = select,Auto-test,CN,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png
+# > Apple策略
+Apple = select,Auto-test,CN,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_SpringLoaded.png
+# > Google策略
+Google = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Google.png
+# > Microsoft策略
+Microsoft = select,Auto-test,US,HK,JP,TW,SG,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Microsoft.png
+# Mainland策略-国内访问
+Mainland = select,Auto-test,CN,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Mainland.png
+# Global策略
+Global = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png
+# GlobalMedia策略
+GlobalMedia = select,Auto-test,US,HK,JP,TW,SG,KR,FINAL,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_FaceTime.png
+# FINAL策略：如果以上的策略均未被匹配到，则听从此策略组的规定
+FINAL = select,Auto-test,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/Twoandz9/Fishport.png
+
+[Remote Rule]
+## 远程分流规则订阅
+## 将网络请求进行分流，网络请求的走向(是否能成功访问)由匹配到的策略组决定
+# Binance规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Binance/Binance.list, policy=Binance, tag=Binance规则, enabled=true
+# Okx规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/OKX/OKX.list, policy=Okx, tag=Okx规则, enabled=true
+# Wechat规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list, policy=Wechat, tag=Wechat规则, enabled=true
+# AI规则
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI, tag=AI规则, enabled=true
+# Copilot规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Copilot/Copilot.list, policy=DIRECT, tag=Copilot规则, enabled=true
+# GitHub规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=GitHub, tag=GitHub规则, enabled=true
+# Steam规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Steam/Steam.list, policy=Steam, tag=Steam规则, enabled=true
+# Majsoul规则
+https://raw.githubusercontent.com/Serein1202/ios_rule_script-blackmatrix7/master/rule/Loon/Majsoul/Majsoul.list, policy=Majsoul, tag=Majsoul规则, enabled=true
+# Speedtest规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Speedtest/Speedtest.list, policy=Speedtest, tag=Speedtest规则, enabled=true
+# Spotify规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=Spotify, tag=Spotify规则, enabled=true
+# YouTube规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=YouTube, tag=YouTube规则, enabled=true
+# TikTok规则
+https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Loon/TikTok.list, policy=TikTok, tag=TikTok规则, enabled=true
+# Telegram规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram规则, enabled=true
+# Paypal规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list, policy=PayPal, tag=PayPal规则, enabled=true
+# Microsoft规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Microsoft/Microsoft.list, policy=Microsoft, tag=Microsoft规则, enabled=true
+# Twitter规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Twitter/Twitter.list, policy=X, tag=Twitter规则, enabled=true
+# Google规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list, policy=Google, tag=Google规则, enabled=true
+# TestFlight规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/TestFlight/TestFlight.list, policy=TestFlight, tag=TestFlight规则, enabled=true
+# Apple规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Apple/Apple_Domain.list, policy=Apple, tag=Apple规则, parser-enable=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Apple/Apple_Resolve.list, policy=Apple, tag=Apple规则, parser-enable=true, enabled=true
+# BiliBili规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBili/BiliBili.list, policy=BiliBili, tag=BiliBili规则, enabled=true
+# Weibo规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Weibo/Weibo.list, policy=Weibo, tag=Weibo规则, enabled=true
+# MeiTuan规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/MeiTuan/MeiTuan.list, policy=SkipProxy, tag=MeiTuan规则, enabled=true
+# Alibaba规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Alibaba/Alibaba.list, policy=SkipProxy, tag=Alibaba规则, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Alibaba/Alibaba_Domain.list, policy=SkipProxy, tag=Alibaba规则, enabled=true
+# Mainland规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/China/China.list, policy=Mainland, tag=Mainland规则, enabled=true
+# Global规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Global/Global.list, policy=Global, tag=Global规则, enabled=true
+# GlobalMedia规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GlobalMedia/GlobalMedia.list, policy=GlobalMedia, tag=GlobalMedia规则, enabled=true
+# HTTPDNS禁止
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list, policy=REJECT, tag=Block HTTPDNS, parser-enable=true, enabled=true
+# 微信修复
+# https://github.com/NobyDa/Script/raw/master/Surge/WeChat.list, policy=DIRECT, tag=微信修复, parser-enable=true, enabled=true
+# ASN分流
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, policy=CN, tag=ASN分流, enabled=true
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=DIRECT, tag=LAN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGION, enabled=true
+
+[Rule]
+# 本地分流规则:相同规则下本地规则优先生效
+DOMAIN-SUFFIX,landiannews.com,DIRECT
+DOMAIN-KEYWORD,122.gov.cn,DIRECT
+DOMAIN,cotota.app,JP
+DOMAIN,h2breeze.com,JP
+AND,((DOMAIN,amdc.m.taobao.com),(USER-AGENT,"Cainiao4iPhone *")),REJECT
+DOMAIN,dns.weixin.qq.com.cn,DIRECT
+DOMAIN,dns.weixin.qq.com,DIRECT
+DOMAIN-KEYWORD,googlevideo,HK
+DOMAIN-KEYWORD,unityads,REJECT
+DOMAIN-KEYWORD,googleads,REJECT
+DOMAIN-SUFFIX,starrails.com,TW
+DOMAIN-KEYWORD,glulive,JP
+DOMAIN-KEYWORD,supersonicads,JP
+DOMAIN-KEYWORD,amazonaws,HK
+DOMAIN-KEYWORD,tapjoy,JP
+DOMAIN-SUFFIX,picacomic.com,HK
+DOMAIN-SUFFIX,tipatipa.xyz,HK
+DOMAIN,tgbots.io,TW
+DOMAIN,hanime1.me,HK
+DOMAIN,pc.stgowan.com,REJECT
+DOMAIN,v2.euqq.cn,REJECT
+IP-CIDR,180.76.76.200/32,REJECT
+DOMAIN,flyairport.top,TW
+IP-ASN,132203,DIRECT
+DOMAIN,www.avogado6.com,JP
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+DOMAIN,amdc.m.taobao.com,REJECT
+DOMAIN,sdkapp.uve.weibo.com,CN
+# 绕过企业证书过期
+DOMAIN,ocsp.apple.com,REJECT
+# 其它
+DOMAIN-SUFFIX,local,DIRECT
+# 抖音本地分流
+DOMAIN-SUFFIX,snssdk.com,DIRECT
+DOMAIN-SUFFIX,amemv.com,DIRECT
+IP-CIDR,28.0.0.1/8,DIRECT
+IP-CIDR,198.18.0.1/16,DIRECT
+IP-CIDR,198.18.0.0/15,DIRECT
+IP-CIDR6,fc00::/18,DIRECT
+FINAL,HK
+
+[Remote Rewrite]
+# 远程重写
+
+[URL Rewrite]
+# 本地重写
+
+[Remote Script]
+https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Daily_bonus.plugin, tag=tb, enabled=true
+
+[Script]
+cron "0 18 * * *" script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Oil/Oil.js, timeout=60, tag=今日油价
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/QuantumultX/master/check_in/glados/checkincookie_env.js, timeout=300, tag=机场签到Cookie版
+cron "5 10 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/QuantumultX/master/check_in/glados/checkin_env.js, timeout=60, tag=ikuuu每日签到
+http-request ^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, timeout=60, tag=贴吧获取cookies
+cron "40 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, timeout=60, tag=贴吧签到
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=10, tag=高德签到
+http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, binary-body-mode=true, timeout=10, enabled=false, tag=高德
+cron "0 11 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js, timeout=10, tag=60s读世界
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/check.js, timeout=300, tag=流媒体-解锁查询, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/GMedia.png
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, timeout=600, tag=微博超话
+cron "12 0 * * *" script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/refs/heads/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, timeout=300, tag=阿里网盘签到
+cron "0 9,15 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js, timeout=10, tag=黑料不打烊, img-url=https://raw.githubusercontent.com/Toperlock/Quantumult/main/icon/heiliao.png
+[Plugin]
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn_token.plugin, tag=阿里云盘token获取, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AliYunDrive.png, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx, policy=HK, enabled=true
+http://script.hub/file/_start_/https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js/_end_/ampDache.plugin?type=qx-rewrite&target=loon-plugin&del=true, tag=高德地图_cookies获取, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Amap.png, enabled=true
+https://raw.githubusercontent.com/deezertidal/private/master/plugallery/adguard.plugin, enabled=true
+https://script.hub/file/_start_/https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/XiaoMaoWeiBo.js/_end_/XiaoMaoWeiBo.plugin?n=%E5%BE%AE%E5%8D%9A%E8%A7%A3%E9%94%81%E9%83%A8%E5%88%86VIP%2B%40xiaomaoJT&type=qx-rewrite&target=loon-plugin, tag=微博解锁部分VIP, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo.png, enabled=true
+https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js, tag=微博_cookies获取, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo.png, enabled=true
+https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin, enabled=true
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/XWebAds.plugin, enabled=true
+https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.lpx, enabled=true
+https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/eCharge/eCharge.lpx, enabled=true
+https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/XiaojukejiCharge_remove_ads.lpx, enabled=true
+https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/WxApp.lpx, tag=功夫去水印去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TXDocs_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Umetrip_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_Price.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, policy=HK, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, policy=DIRECT, enabled=true
+https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, tag=淘宝去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx, enabled=true
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, tag=阿里云盘token获取, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/AliYunDrive.png, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Google.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=true
+https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin, enabled=true
+https://github.com/NSRingo/Maps/releases/latest/download/iRingo.Maps.plugin, tag= iRingo: 🗺️ Maps, enabled=true
+https://github.com/DualSubs/Universal/releases/latest/download/DualSubs.Universal.plugin, tag=🍿️ DualSubs: 🔣 Universal, enabled=true
+https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.plugin, tag=🍿️ DualSubs: ▶️ YouTube, enabled=true
+https://github.com/DualSubs/Spotify/releases/latest/download/DualSubs.Spotify.plugin, tag=🍿️ DualSubs: 🎵 Spotify, enabled=true
+https://github.com/NSRingo/LocationService/releases/latest/download/iRingo.LocationService.plugin, tag= iRingo: 📍 Location, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx, enabled=true
+https://github.com/VirgilClyne/GetSomeFries/raw/main/plugin/DNS.plugin, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Advertising/Advertising.plugin, policy=REJECT, tag=Advertising, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, tag=Redirect, enabled=true
+https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, policy=DIRECT, tag=转换, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=HK, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=TW, tag=BoxJs, enabled=true
+
+[Mitm]
+hostname = -buy.itunes.apple.com,*.bilibili.com,payapp.weixin.qq.com
+ca-p12 = 
+ca-passphrase = 
+skip-server-cert-verify = false
