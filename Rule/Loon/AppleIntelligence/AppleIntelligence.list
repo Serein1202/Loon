@@ -1,16 +1,17 @@
 # NAME: AppleIntelligence
 # AUTHOR: Serein1202
 # REPO: https://github.com/Serein1202/ios_rule_script-blackmatrix7
-# UPDATED: 2026-06-11 23:25:13
-# DOMAIN: 6
-# DOMAIN-SUFFIX: 3
-# TOTAL: 9
+# UPDATED: 2026-06-15 17:25:13
+# DOMAIN-SUFFIX: 11
+# TOTAL: 11
 DOMAIN-SUFFIX,smoot.apple.com
-DOMAIN,apple-relay.apple.com
-DOMAIN,apple-relay.cloudflare.com
-DOMAIN,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,gateway.icloud.com
-DOMAIN,cp4.cloudflare.com
-DOMAIN,guzzoni.apple.com
-DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,cp4.cloudflare.com
+DOMAIN-SUFFIX,guzzoni.apple.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
 DOMAIN-SUFFIX,apps.mzstatic.com
+DOMAIN-SUFFIX, apple-relay.akamaized.net
+DOMAIN-SUFFIX, apple-relay.mask.apple-dns.net
