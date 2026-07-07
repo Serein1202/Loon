@@ -22,6 +22,17 @@ DOMAIN,afm.apple.com
 DOMAIN,afm-api.apple.com
 DOMAIN,afm.cloud.apple.com
 
+# ===== Private Cloud Compute (PCC) 隐私云计算 =====
+DOMAIN-SUFFIX,pcc.apple.com
+DOMAIN-SUFFIX,pcp.apple.com
+
+# ===== Apple Vision / Visual Intelligence 视觉智能 =====
+DOMAIN-SUFFIX,vision.apple.com
+DOMAIN-SUFFIX,vision-api.apple.com
+
+# ===== Writing Tools 写作工具 =====
+DOMAIN-SUFFIX,writingtools.apple.com
+
 # ===== Apple 官方 API =====
 DOMAIN,api.apple.com
 DOMAIN,api2.apple.com
@@ -29,7 +40,13 @@ DOMAIN,api5.apple.com
 DOMAIN,appleinc.akadns.net
 DOMAIN-SUFFIX,apple.com.akadns.net
 
-# ===== Gemini / Google大模型（Apple-Gemini合作后端） =====
+# ===== ChatGPT（Apple 官方集成后端） =====
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+
+# ===== Gemini（Apple 官方集成后端） =====
 DOMAIN,gemini.apple.com
 DOMAIN,geminiapis.apple.com
 DOMAIN,geminiprops.apple.com
@@ -38,7 +55,7 @@ DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,ai.google.dev
 DOMAIN-SUFFIX,aiplatform.googleapis.com
 
-# ===== Private Relay / iCloud+ 中继（来自Serein1202） =====
+# ===== Private Relay / iCloud+ 隐私中继与云端计算 =====
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,apple-relay.apple.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
@@ -51,7 +68,7 @@ DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
 
 # ===== App Store 静态资源 =====
-DOMAIN-SUFFIX,apps.mzstatic.com
+# DOMAIN-SUFFIX,mzstatic.com
 
 # ===== 关键字匹配（兜底新增子域名） =====
 DOMAIN-KEYWORD,appleintelligence
@@ -62,8 +79,7 @@ DOMAIN-KEYWORD,applellm
 DOMAIN-KEYWORD,apple-llm
 DOMAIN-KEYWORD,afm-cloud
 
-# ===== IP段兜底 =====
-IP-CIDR,17.0.0.0/8,no-resolve
+# ===== Google IP 兜底（保留原版中精确的 Google 智能 IP 段） =====
 IP-CIDR,142.250.0.0/15,no-resolve
 IP-CIDR,172.217.0.0/16,no-resolve
 IP-CIDR,216.58.192.0/19,no-resolve
