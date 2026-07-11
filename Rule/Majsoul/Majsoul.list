@@ -1,0 +1,17 @@
+# NAME: Majsoul
+# AUTHOR: Serein1202
+# REPO: https://github.com/Serein1202
+# UPDATED: 2026-07-11 22:25:13
+# MERGED: 2026-07-11 22:25:13
+# TOTAL: 9
+
+
+DOMAIN-SUFFIX,game.maj-soul.com
+DOMAIN-SUFFIX,gateway-cdn.maj-soul.com
+DOMAIN-SUFFIX,gateway-hw.maj-soul.com
+DOMAIN-SUFFIX,gateway-sy.maj-soul.com
+DOMAIN-SUFFIX,gateway-v2.maj-soul.com
+DOMAIN-SUFFIX,lb-cdn.maj-soul.com
+DOMAIN-SUFFIX,lb-hw.maj-soul.com
+DOMAIN-SUFFIX,lb-v2.maj-soul.com
+DOMAIN-SUFFIX,majsoul-hk-client.cn-hongkong.log.aliyuncs.com
