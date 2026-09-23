@@ -1,9 +1,9 @@
 #!name=部分微信小程序去广告
 #!desc=针对部分小程序广告进行拦截，要清除缓存拦截广告才会生效！
 #!author=Serein1202[https://github.com/Serein1202]
-#!icon=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/Wxapp.png
-#!homepage=https://github.com/Serein1202/Loon
-#!raw-url=https://github.com/Serein1202/Loon/blob/main/test/Wxapp/WxApp.lpx
+#!icon=https://raw.githubusercontent.com/Serein1202/ProxyHome/refs/heads/main/Loon/Scripts/Wxapp/Wxapp.png
+#!homepage=https://github.com/Serein1202/ProxyHome
+#!raw-url=https://github.com/Serein1202/ProxyHome/blob/main/Loon/Scripts/Wxapp/WxApp.lpx
 #!tag=去广告, Serein1202
 #!system=iOS, iPadOS
 #!date=2026-01-19 15:30:00
@@ -31,8 +31,8 @@
 # ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user response-body-json-replace vip 1 invite_num 5 data.residue_time 4102397476
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/share response-body-json-replace data.invite_num 5
 [Script]
-http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/WxApp.js, requires-body=true, timeout=60, tag=WxAppIv
-http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/WxApp.js, requires-body=true, timeout=60, tag=WxAppVip
+http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/invite script-path=https://raw.githubusercontent.com/Serein1202/ProxyHome/refs/heads/main/Loon/Scripts/Wxapp/WxApp.js, requires-body=true, timeout=60, tag=WxAppIv
+http-response ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat_v2\/user script-path=https://raw.githubusercontent.com/Serein1202/ProxyHome/refs/heads/main/Loon/Scripts/Wxapp/WxApp.js, requires-body=true, timeout=60, tag=WxAppVip
 
 
 [MITM]

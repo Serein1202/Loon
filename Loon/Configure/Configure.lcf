@@ -253,7 +253,7 @@ FINAL,HK
 https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Daily_bonus.plugin, tag=tb, enabled=true
 
 [Script]
-cron "0 18 * * *" script-path=https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Oil/Oil.js, timeout=60, tag=今日油价
+cron "0 18 * * *" script-path=https://raw.githubusercontent.com/Serein1202/ProxyHome/refs/heads/main/Loon/Scripts/Oil/Oil.js, timeout=60, tag=今日油价
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/QuantumultX/master/check_in/glados/checkincookie_env.js, timeout=300, tag=机场签到Cookie版
 cron "5 10 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/QuantumultX/master/check_in/glados/checkin_env.js, timeout=60, tag=ikuuu每日签到
 http-request ^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, timeout=60, tag=贴吧获取cookies
@@ -277,11 +277,11 @@ https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin, enabled=true
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/XWebAds.plugin, enabled=true
-https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/test/Sinopec/Sinopec.lpx, enabled=true
-https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/eCharge/eCharge.lpx, enabled=true
-https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/StarCharge/StarCharge.lpx, enabled=true
+https://raw.githubusercontent.com/Serein1202/ProxyHome/refs/heads/main/Loon/test/Sinopec/Sinopec.lpx, enabled=true
+https://raw.githubusercontent.com/Serein1202/ProxyHome/refs/heads/main/Loon/Scripts/eCharge/eCharge.lpx, enabled=true
+https://raw.githubusercontent.com/Serein1202/ProxyHome/refs/heads/main/Loon/Scripts/StarCharge/StarCharge.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/XiaojukejiCharge_remove_ads.lpx, enabled=true
-https://raw.githubusercontent.com/Serein1202/Loon/refs/heads/main/Scripts/Wxapp/WxApp.lpx, tag=功夫去水印去广告, enabled=true
+https://raw.githubusercontent.com/Serein1202/ProxyHome/refs/heads/main/Loon/Scripts/Wxapp/WxApp.lpx, tag=功夫去水印去广告, enabled=true
 https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
