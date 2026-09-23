@@ -3,85 +3,49 @@
 # REPO: https://github.com/Serein1202/ios_rule_script-blackmatrix7
 # UPDATED: 2026-06-15 17:25:13
 # MERGED: 2026-06-15 17:56
-# TOTAL: 35
+# TOTAL: 18
 
-# ===== Apple Intelligence 核心域名 =====
-DOMAIN,appleintelligence.apple.com
-DOMAIN,appleintelligence2.apple.com
-DOMAIN,genai.apple.com
+# ========== Apple Intelligence 核心服务 ==========
+# Siri 请求路由（AI + 语音助手）
+DOMAIN-KEYWORD,siri
 
-# ===== Siri AI / 新版Siri独立App =====
-DOMAIN,siri.apple.com
-DOMAIN,siri-api.apple.com
-DOMAIN,siri-intent.apple.com
-DOMAIN,siri-companion.apple.com
-DOMAIN,intelligence.apple.com
-
-# ===== Apple AI 云端模型（AFM） =====
-DOMAIN,afm.apple.com
-DOMAIN,afm-api.apple.com
-DOMAIN,afm.cloud.apple.com
-
-# ===== Private Cloud Compute (PCC) 隐私云计算 =====
-DOMAIN-SUFFIX,pcc.apple.com
-DOMAIN-SUFFIX,pcp.apple.com
-
-# ===== Apple Vision / Visual Intelligence 视觉智能 =====
-DOMAIN-SUFFIX,vision.apple.com
-DOMAIN-SUFFIX,vision-api.apple.com
-
-# ===== Writing Tools 写作工具 =====
-DOMAIN-SUFFIX,writingtools.apple.com
-
-# ===== Apple 官方 API =====
-DOMAIN,api.apple.com
-DOMAIN,api2.apple.com
-DOMAIN,api5.apple.com
-DOMAIN,appleinc.akadns.net
-DOMAIN-SUFFIX,apple.com.akadns.net
-
-# ===== ChatGPT（Apple 官方集成后端） =====
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-
-# ===== Gemini（Apple 官方集成后端） =====
-DOMAIN,gemini.apple.com
-DOMAIN,geminiapis.apple.com
-DOMAIN,geminiprops.apple.com
-DOMAIN-SUFFIX,generativeai.google.com
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,ai.google.dev
-DOMAIN-SUFFIX,aiplatform.googleapis.com
-
-# ===== Private Relay / iCloud+ 隐私中继与云端计算 =====
-DOMAIN-SUFFIX,smoot.apple.com
-DOMAIN-SUFFIX,apple-relay.apple.com
-DOMAIN-SUFFIX,apple-relay.cloudflare.com
-DOMAIN-SUFFIX,apple-relay.fastly-edge.com
-DOMAIN-SUFFIX,apple-relay.akamaized.net
-DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net
-DOMAIN-SUFFIX,gateway.icloud.com
-DOMAIN-SUFFIX,cp4.cloudflare.com
-DOMAIN-SUFFIX,guzzoni.apple.com
+# Apple Intelligence 请求入口（设备侧连接到 Apple 服务器）
 DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,ls.apple.com
 
-# ===== App Store 静态资源 =====
-# DOMAIN-SUFFIX,mzstatic.com
+# Apple Intelligence 云端服务代理
+DOMAIN-SUFFIX,gateway.icloud.com
 
-# ===== 关键字匹配（兜底新增子域名） =====
-DOMAIN-KEYWORD,appleintelligence
-DOMAIN-KEYWORD,genai
-DOMAIN-KEYWORD,siri-ai
-DOMAIN-KEYWORD,siri_ai
-DOMAIN-KEYWORD,applellm
-DOMAIN-KEYWORD,apple-llm
-DOMAIN-KEYWORD,afm-cloud
+# ========== 域名掩码（DNS 加密/混淆）==========
+# Apple 使用域名掩码技术，将真实请求伪装成对 Apple DNS 的访问
+# 作用：绕过 DNS 污染、隐藏真实请求目标
 
-# ===== Google IP 兜底（保留原版中精确的 Google 智能 IP 段） =====
-IP-CIDR,142.250.0.0/15,no-resolve
-IP-CIDR,172.217.0.0/16,no-resolve
-IP-CIDR,216.58.192.0/19,no-resolve
-IP-CIDR,74.125.0.0/16,no-resolve
+# Cloudflare CDN 代理节点
+DOMAIN-SUFFIX,cp4.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
 
+# Fastly CDN 代理节点
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+
+# Apple DNS API（掩码查询接口）
+DOMAIN-SUFFIX,mask.icloud.com
+DOMAIN-SUFFIX,mask-h2.icloud.com
+DOMAIN,mask-api.icloud.com
+
+# Apple DNS 掩码专用域名（设备级连接）
+DOMAIN,mask-api.fe.apple-dns.net
+DOMAIN,mask-t.apple-dns.net
+DOMAIN,mask.apple-dns.net
+
+# Apple 内部代理路由
+DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
+
+# ========== 辅助资源 ==========
+# Apple Intelligence App UI / 资源下载
+DOMAIN-SUFFIX,apps.mzstatic.com
+
+# ========== 系统级服务 ==========
+# Siri 本地唤醒服务（设备侧）
+DOMAIN,guzzoni.apple.com
