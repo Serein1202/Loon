@@ -64,8 +64,6 @@ ProxyHome
     │   ├── Oil                  # 今日油价查询
     │   ├── StarCharge           # 星星充电去广告
     │   └── Wxapp                # 微信小程序去广告
-    └── test
-        └── Sinopec              # 中石化去广告（测试中）
 ```
 
 </details>
@@ -78,7 +76,6 @@ ProxyHome
 | [Loon/Rule](./Loon/Rule) | 应用级分流规则（`.list`），可直接被 Loon 订阅引用 |
 | [Loon/Scripts](./Loon/Scripts) | 针对特定 App 的功能优化脚本与插件（`.js` / `.lpx`） |
 | [Loon/Files](./Loon/Files) | 小米电视去广告规则、正则速查文档 |
-| [Loon/test](./Loon/test) | 测试中的内容 |
 | [Clash](./Clash) | mihomo / ClashParty 的 YAML 配置 |
 
 ## 使用说明
