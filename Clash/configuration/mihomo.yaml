@@ -286,6 +286,8 @@ rules:
   - RULE-SET,Lan,DIRECT
   - RULE-SET,Direct,DIRECT
   - RULE-SET,Reject,REJECT
+  - DOMAIN-SUFFIX,quark.cn,Manual
+  - DOMAIN-SUFFIX,quark.com,Manual
   - RULE-SET,AI,AI
   - RULE-SET,Telegram,Telegram
   - RULE-SET,X,X
