@@ -288,6 +288,7 @@ rules:
   - RULE-SET,Reject,REJECT
   - DOMAIN-SUFFIX,quark.cn,Manual
   - DOMAIN-SUFFIX,quark.com,Manual
+  - DOMAIN-SUFFIX,muse.ai,United States
   - RULE-SET,AI,AI
   - RULE-SET,Telegram,Telegram
   - RULE-SET,X,X
